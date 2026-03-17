@@ -1,0 +1,74 @@
+{
+  "items": [
+    {
+      "id": "60e943b7-716d-425e-8984-6270ffc593a2",
+      "name": "Toxocara Canis Larvae",
+      "species": "Dog",
+      "image_url": "https://todaysveterinarypractice.com/wp-content/uploads/sites/4/2019/08/2019_0910_Roundworms_Fig1B.png",
+      "created_at": "2026-02-19T17:27:15Z"
+    },
+    {
+      "id": "b4365864-9d7a-45b1-9960-271ed8c55c4c",
+      "name": "Male Toxocara canis ",
+      "species": "Dog",
+      "image_url": "https://wcvm.usask.ca/learnaboutparasites/images/toxocara-canis-tail-projection-2021.jpg",
+      "created_at": "2026-02-19T17:27:15Z"
+    },
+    {
+      "id": "a0c66c40-07a7-4b93-b2b7-95453be8861e",
+      "name": "{Toxoplasmosis}",
+      "species": "Cat",
+      "image_url": "https://www.researchgate.net/profile/Hassan-Naser-3/publication/316403878/figure/fig1/AS:486206057259014@1492931965962/Figure-1-The-flotation-methods-image-using-light-microscope-400X-power-from-fresh.png",
+      "created_at": "2026-02-19T17:27:15Z"
+    },
+    {
+      "id": "ade3b296-e7d0-4340-a7dd-65ce0f40b25c",
+      "name": "{Ancylostoma caninum Adult (hookworm)}",
+      "species": "Dog",
+      "image_url": "https://wcvm.usask.ca/learnaboutparasites/images/ancylostoma-teeth4-l.jpg",
+      "created_at": "2026-02-19T17:27:15Z"
+    },
+    {
+      "id": "445fc436-00c5-4499-bbc3-ee3abc5184ee",
+      "name": "{Ancylostoma caninum Egg (hookworm)}",
+      "species": "Dog",
+      "image_url": "https://wcvm.usask.ca/learnaboutparasites/images/ancylostoma-egg-l.jpg",
+      "created_at": "2026-02-19T17:27:15Z"
+    },
+    {
+      "id": "9d24a753-11f0-4814-8fe0-3587b0881e25",
+      "name": "{Ancylostoma caninum hookworm adult}",
+      "species": "Dog",
+      "image_url": "https://todaysveterinarypractice.com/wp-content/uploads/sites/4/2019/10/2019_1112_Hookworms_Fig1A.png",
+      "created_at": "2026-02-19T17:27:15Z"
+    },
+    {
+      "id": "30ec6287-a31b-4531-88ab-1480b5edbc59",
+      "name": "{Ancylostoma caninum hookworms Egg}",
+      "species": "Dog",
+      "image_url": "https://todaysveterinarypractice.com/wp-content/uploads/sites/4/2019/10/main-image-8.png",
+      "created_at": "2026-02-19T17:27:15Z"
+    },
+    {
+      "id": "87f37bec-f1d4-4432-a288-70ad2f6d6c4e",
+      "name": "{Femail Toxocara canis}",
+      "species": "Dog",
+      "image_url": "http://wcvm.usask.ca/learnaboutparasites/images/toxascaris-leonina-alae-2021a.jpg",
+      "created_at": "2026-02-19T17:27:15Z"
+    },
+    {
+      "id": "a9a80fcc-01f5-4bef-951b-304dec4b08e0",
+      "name": "{Toxocara canis Egg}",
+      "species": "Dog",
+      "image_url": "https://wcvm.usask.ca/learnaboutparasites/images/toxocara-canis-eggs-2021.jpg",
+      "created_at": "2026-02-19T17:27:15Z"
+    },
+    {
+      "id": "32d35f08-e159-4bab-8c24-4c73fed55283",
+      "name": "{Otodectes cynotis}",
+      "species": "Cat, Dog, Other carnivores",
+      "image_url": "https://wcvm.usask.ca/learnaboutparasites/images/otodectes-male-2021.jpg",
+      "created_at": "2026-02-19T17:27:15Z"
+    }
+  ]
+}

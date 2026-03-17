@@ -1,0 +1,69 @@
+{
+  "items": [
+    {
+      "id": "d4426200-922f-47ba-ab0a-37bec65da258",
+      "username": "admin",
+      "email": "admin@vetdict.com",
+      "hashed_password": "$2b$12$bJm0HRODwDGcQ1Echx5zk.NdypRk6wOrmRRkuMGtARuqmI0WEIWiS",
+      "is_active": true,
+      "is_admin": true,
+      "total_points": 0,
+      "today_points": 0,
+      "photo_url": null,
+      "google_id": null,
+      "created_at": "2026-02-19T17:27:01Z"
+    },
+    {
+      "id": "65770c3a-7bd9-4040-ac24-75e9cdb870ae",
+      "username": "admin2",
+      "email": "admin2@gmail.com",
+      "hashed_password": "$2b$12$rCaQdpyi8E1B/HZb5ykb0uQvP6HcQHt.VmbHYzK0VdrSeLP08YCEK",
+      "is_active": true,
+      "is_admin": true,
+      "total_points": 0,
+      "today_points": 0,
+      "photo_url": null,
+      "google_id": null,
+      "created_at": "2025-08-22T17:30:56Z"
+    },
+    {
+      "id": "1a038ad3-91e7-4cb3-a1a5-fa5e5c29dbaa",
+      "username": "Ahmad 100m",
+      "email": "vary9611@gmail.com",
+      "hashed_password": "$2b$12$voCikKQ8Vum3pAk5npom7u0l8SbNhZDdXLAbaNy2OynSk7kil0PSS",
+      "is_active": true,
+      "is_admin": false,
+      "total_points": 0,
+      "today_points": 0,
+      "photo_url": null,
+      "google_id": null,
+      "created_at": "2025-10-21T17:07:20Z"
+    },
+    {
+      "id": "a6ab494e-089f-4b1c-8967-615a59603179",
+      "username": "Shadman Othman",
+      "email": "shadmanosman59@gmail.com",
+      "hashed_password": "$2b$12$aq4EQHklioi.RzzxfrJ5OuLENy5FJuOHW/2LLE2qO.XixN0Yyp8F6",
+      "is_active": true,
+      "is_admin": false,
+      "total_points": 100,
+      "today_points": 100,
+      "photo_url": "https://lh3.googleusercontent.com/a/ACg8ocLDKUCCD-KR6Q9Ea7rHmufoktXc6urqp_clxjaFu6Du0EYQDjCC",
+      "google_id": null,
+      "created_at": "2025-10-21T14:59:30Z"
+    },
+    {
+      "id": "2c61428e-0735-4baa-a70c-5c4d090e41e4",
+      "username": "vary9610",
+      "email": "vary9610@gmail.com",
+      "hashed_password": "$2b$12$VfcWpsUB/B.1xNixykxZqe3lXKzcJIAwUXHEoBWTOjLMjECmutufq",
+      "is_active": true,
+      "is_admin": false,
+      "total_points": 0,
+      "today_points": 0,
+      "photo_url": null,
+      "google_id": null,
+      "created_at": "2026-02-27T19:49:32Z"
+    }
+  ]
+}

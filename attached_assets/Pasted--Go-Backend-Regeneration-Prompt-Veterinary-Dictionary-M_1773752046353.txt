@@ -1,0 +1,585 @@
+# Go Backend Regeneration Prompt - Veterinary Dictionary Management System
+
+## Overview
+Regenerate the complete backend API for the VetStan Veterinary Dictionary Management System using Go programming language. This system manages veterinary medical data including dictionary terms, diseases, drugs, books, instruments, tests, slides, notes, normal ranges, and more.
+
+## Current Architecture (Reference)
+The existing system is built with Python/FastAPI and includes:
+- 15+ data models with complex relationships
+- Authentication system with JWT tokens
+- 50+ API endpoints across multiple modules
+- File upload capabilities for images
+- Search and pagination functionality
+- Local storage synchronization
+- Multi-language support (Kurdish/English)
+
+## Required Go Implementation
+
+### 1. **Project Structure**
+```
+vetstan-backend/
+├── cmd/
+│   └── server/
+│       └── main.go
+├── internal/
+│   ├── config/
+│   │   └── config.go
+│   ├── models/
+│   │   ├── user.go
+│   │   ├── dictionary.go
+│   │   ├── disease.go
+│   │   ├── drug.go
+│   │   ├── book.go
+│   │   ├── instrument.go
+│   │   ├── test.go
+│   │   ├── slide.go
+│   │   ├── note.go
+│   │   ├── normal_range.go
+│   │   ├── ceo.go
+│   │   ├── supporter.go
+│   │   ├── history_item.go
+│   │   └── notification.go
+│   ├── handlers/
+│   │   ├── auth.go
+│   │   ├── dictionary.go
+│   │   ├── diseases.go
+│   │   ├── drugs.go
+│   │   ├── books.go
+│   │   ├── instruments.go
+│   │   ├── tests.go
+│   │   ├── slides.go
+│   │   ├── notes.go
+│   │   ├── normal_ranges.go
+│   │   ├── about.go
+│   │   ├── search.go
+│   │   └── sync.go
+│   ├── services/
+│   │   ├── auth.go
+│   │   ├── dictionary.go
+│   │   ├── diseases.go
+│   │   ├── drugs.go
+│   │   ├── books.go
+│   │   ├── instruments.go
+│   │   ├── tests.go
+│   │   ├── slides.go
+│   │   ├── notes.go
+│   │   ├── normal_ranges.go
+│   │   ├── about.go
+│   │   ├── search.go
+│   │   └── upload.go
+│   ├── middleware/
+│   │   ├── auth.go
+│   │   ├── cors.go
+│   │   ├── logging.go
+│   │   └── rate_limit.go
+│   ├── database/
+│   │   ├── postgres.go
+│   │   ├── migrations.go
+│   │   └── seeds.go
+│   └── utils/
+│       ├── response.go
+│       ├── validation.go
+│       ├── encryption.go
+│       └── helpers.go
+├── pkg/
+│   ├── logger/
+│   └── validator/
+├── migrations/
+├── uploads/
+├── docs/
+├── go.mod
+├── go.sum
+└── README.md
+```
+
+### 2. **Technology Stack**
+- **Web Framework**: Gin (or Echo/Fiber)
+- **Database**: PostgreSQL with GORM
+- **Authentication**: JWT tokens with golang-jwt
+- **Validation**: go-playground/validator
+- **File Upload**: multipart/form-data support
+- **Logging**: logrus or zap
+- **Configuration**: Viper for environment variables
+- **Documentation**: Swagger/OpenAPI with swaggo
+- **Testing**: Go's built-in testing + testify
+
+### 3. **Database Models (PostgreSQL + GORM)**
+
+#### User Model
+```go
+type User struct {
+    ID        uint      `gorm:"primaryKey" json:"id"`
+    Username  string    `gorm:"unique;not null" json:"username"`
+    Email     string    `gorm:"unique;not null" json:"email"`
+    Password  string    `gorm:"not null" json:"-"`
+    FirstName string    `json:"first_name"`
+    LastName  string    `json:"last_name"`
+    Role      string    `gorm:"default:'user'" json:"role"`
+    IsActive  bool      `gorm:"default:true" json:"is_active"`
+    CreatedAt time.Time `json:"created_at"`
+    UpdatedAt time.Time `json:"updated_at"`
+}
+```
+
+#### Dictionary/Terminology Model
+```go
+type Word struct {
+    ID             uint   `gorm:"primaryKey" json:"id"`
+    Word           string `gorm:"not null" json:"word"`
+    KurdishMeaning string `gorm:"not null" json:"kurdish_meaning"`
+    Category       string `json:"category"`
+    CreatedAt      time.Time `json:"created_at"`
+    UpdatedAt      time.Time `json:"updated_at"`
+}
+```
+
+#### Disease Model
+```go
+type Disease struct {
+    ID        uint   `gorm:"primaryKey" json:"id"`
+    Name      string `gorm:"not null" json:"name"`
+    Kurdish   string `json:"kurdish"`
+    Symptoms  string `gorm:"type:text" json:"symptoms"`
+    Cause     string `gorm:"type:text" json:"cause"`
+    Control   string `gorm:"type:text" json:"control"`
+    CreatedAt time.Time `json:"created_at"`
+    UpdatedAt time.Time `json:"updated_at"`
+}
+```
+
+#### Drug Model
+```go
+type Drug struct {
+    ID          uint   `gorm:"primaryKey" json:"id"`
+    Name        string `gorm:"not null" json:"name"`
+    Usage       string `gorm:"type:text" json:"usage"`
+    SideEffect  string `gorm:"type:text" json:"side_effect"`
+    OtherInfo   string `gorm:"type:text" json:"other_info"`
+    DrugClass   string `json:"drug_class"`
+    CreatedAt   time.Time `json:"created_at"`
+    UpdatedAt   time.Time `json:"updated_at"`
+}
+```
+
+#### Book Model
+```go
+type Book struct {
+    ID          uint   `gorm:"primaryKey" json:"id"`
+    Title       string `gorm:"not null" json:"title"`
+    Author      string `json:"author"`
+    ISBN        string `gorm:"unique" json:"isbn"`
+    Description string `gorm:"type:text" json:"description"`
+    ImageURL    string `json:"image_url"`
+    CreatedAt   time.Time `json:"created_at"`
+    UpdatedAt   time.Time `json:"updated_at"`
+}
+```
+
+#### Instrument Model
+```go
+type Instrument struct {
+    ID           uint   `gorm:"primaryKey" json:"id"`
+    Name         string `gorm:"not null" json:"name"`
+    Description  string `gorm:"type:text" json:"description"`
+    Usage        string `gorm:"type:text" json:"usage"`
+    Category     string `json:"category"`
+    Manufacturer string `json:"manufacturer"`
+    CreatedAt    time.Time `json:"created_at"`
+    UpdatedAt    time.Time `json:"updated_at"`
+}
+```
+
+#### Test Models (5 categories)
+```go
+type Test struct {
+    ID          uint   `gorm:"primaryKey" json:"id"`
+    Name        string `gorm:"not null" json:"name"`
+    Description string `gorm:"type:text" json:"description"`
+    ImageURL    string `json:"image_url"`
+    Category    string `gorm:"not null" json:"category"` // haematology, serology, biochemistry, bacteriology, other
+    Species     string `json:"species"`
+    CreatedAt   time.Time `json:"created_at"`
+    UpdatedAt   time.Time `json:"updated_at"`
+}
+```
+
+#### Slide Models (3 categories)
+```go
+type Slide struct {
+    ID        uint   `gorm:"primaryKey" json:"id"`
+    Name      string `gorm:"not null" json:"name"`
+    Species   string `json:"species"`
+    ImageURL  string `json:"image_url"`
+    Category  string `gorm:"not null" json:"category"` // urine, stool, other
+    CreatedAt time.Time `json:"created_at"`
+    UpdatedAt time.Time `json:"updated_at"`
+}
+```
+
+#### Note Model
+```go
+type Note struct {
+    ID          uint   `gorm:"primaryKey" json:"id"`
+    Name        string `gorm:"not null" json:"name"`
+    Description string `gorm:"type:text" json:"description"`
+    ImageURL    string `json:"image_url"`
+    CreatedAt   time.Time `json:"created_at"`
+    UpdatedAt   time.Time `json:"updated_at"`
+}
+```
+
+#### Normal Range Model
+```go
+type NormalRange struct {
+    ID          uint   `gorm:"primaryKey" json:"id"`
+    Parameter   string `gorm:"not null" json:"parameter"`
+    Species     string `gorm:"not null" json:"species"`
+    Category    string `json:"category"`
+    MinValue    float64 `json:"min_value"`
+    MaxValue    float64 `json:"max_value"`
+    Unit        string `json:"unit"`
+    Description string `gorm:"type:text" json:"description"`
+    CreatedAt   time.Time `json:"created_at"`
+    UpdatedAt   time.Time `json:"updated_at"`
+}
+```
+
+#### About Page Models
+```go
+type CEO struct {
+    ID           uint   `gorm:"primaryKey" json:"id"`
+    Name         string `gorm:"not null" json:"name"`
+    Role         string `json:"role"`
+    Description  string `gorm:"type:text" json:"description"`
+    Color        string `json:"color"`
+    ImageURL     string `json:"image_url"`
+    FacebookURL  string `json:"facebook_url"`
+    ViberURL     string `json:"viber_url"`
+    DisplayOrder int    `json:"display_order"`
+    CreatedAt    time.Time `json:"created_at"`
+    UpdatedAt    time.Time `json:"updated_at"`
+}
+
+type Supporter struct {
+    ID           uint   `gorm:"primaryKey" json:"id"`
+    Name         string `gorm:"not null" json:"name"`
+    Title        string `json:"title"`
+    Color        string `json:"color"`
+    Icon         string `json:"icon"`
+    ImageURL     string `json:"image_url"`
+    DisplayOrder int    `json:"display_order"`
+    CreatedAt    time.Time `json:"created_at"`
+    UpdatedAt    time.Time `json:"updated_at"`
+}
+```
+
+### 4. **API Endpoints Structure**
+
+#### Authentication Endpoints
+```
+POST   /api/auth/register
+POST   /api/auth/login
+POST   /api/auth/logout
+GET    /api/auth/me
+POST   /api/auth/refresh
+```
+
+#### Dictionary/Terminology Endpoints
+```
+GET    /api/dictionary/
+GET    /api/dictionary/{id}
+GET    /api/dictionary/by-name/{word}
+GET    /api/dictionary/search?q={query}
+POST   /api/dictionary/
+PUT    /api/dictionary/{id}
+DELETE /api/dictionary/{id}
+```
+
+#### Diseases Endpoints
+```
+GET    /api/diseases/
+GET    /api/diseases/{id}
+GET    /api/diseases/by-name/{name}
+GET    /api/diseases/search?q={query}
+POST   /api/diseases/
+PUT    /api/diseases/{id}
+DELETE /api/diseases/{id}
+```
+
+#### Drugs Endpoints
+```
+GET    /api/drugs/
+GET    /api/drugs/{id}
+GET    /api/drugs/by-name/{name}
+GET    /api/drugs/search?q={query}
+POST   /api/drugs/
+PUT    /api/drugs/{id}
+DELETE /api/drugs/{id}
+```
+
+#### Books Endpoints
+```
+GET    /api/books/
+GET    /api/books/{id}
+GET    /api/books/by-title/{title}
+GET    /api/books/search?q={query}
+POST   /api/books/
+PUT    /api/books/{title}
+DELETE /api/books/{title}
+```
+
+#### Instruments Endpoints
+```
+GET    /api/instruments/
+GET    /api/instruments/{id}
+GET    /api/instruments/by-name/{name}
+GET    /api/instruments/search?q={query}
+POST   /api/instruments/
+PUT    /api/instruments/{name}
+DELETE /api/instruments/{name}
+```
+
+#### Tests Endpoints (5 categories)
+```
+GET    /api/haematology-tests/
+GET    /api/haematology-tests/{id}
+GET    /api/serology-tests/
+GET    /api/serology-tests/{id}
+GET    /api/biochemistry-tests/
+GET    /api/biochemistry-tests/{id}
+GET    /api/bacteriology-tests/
+GET    /api/bacteriology-tests/{id}
+GET    /api/other-tests/
+GET    /api/other-tests/{id}
+```
+
+#### Slides Endpoints (3 categories)
+```
+GET    /api/urine-slides/
+GET    /api/urine-slides/{id}
+GET    /api/stool-slides/
+GET    /api/stool-slides/{id}
+GET    /api/other-slides/
+GET    /api/other-slides/{id}
+```
+
+#### Notes Endpoints
+```
+GET    /api/notes/
+GET    /api/notes/{id}
+GET    /api/notes/by-name/{name}
+GET    /api/notes/search?q={query}
+POST   /api/notes/
+PUT    /api/notes/{name}
+DELETE /api/notes/{name}
+```
+
+#### Normal Ranges Endpoints
+```
+GET    /api/normal-ranges/
+GET    /api/normal-ranges/{id}
+GET    /api/normal-ranges/by-parameter/{parameter}
+GET    /api/normal-ranges/search?q={query}
+POST   /api/normal-ranges/
+PUT    /api/normal-ranges/{id}
+DELETE /api/normal-ranges/{id}
+```
+
+#### About Page Endpoints
+```
+GET    /api/about/ceos
+GET    /api/about/supporters
+```
+
+#### File Upload Endpoints
+```
+POST   /api/upload/image
+POST   /api/upload/document
+```
+
+#### Search Endpoints
+```
+GET    /api/search/global?q={query}&type={type}
+```
+
+### 5. **Key Features to Implement**
+
+#### Authentication System
+- JWT-based authentication with refresh tokens
+- Role-based access control (admin, user)
+- Password hashing with bcrypt
+- Session management
+
+#### API Features
+- RESTful API design with proper HTTP methods
+- Comprehensive error handling with structured responses
+- Request validation with detailed error messages
+- Pagination support for list endpoints
+- Search functionality across all modules
+- File upload support for images
+- CORS configuration for frontend integration
+
+#### Database Features
+- GORM migrations for schema management
+- Database seeding with initial data
+- Proper indexing for search performance
+- Foreign key relationships where applicable
+- Soft deletes for audit trails
+
+#### Security Features
+- Input sanitization and validation
+- SQL injection prevention with GORM
+- XSS protection
+- Rate limiting per endpoint
+- Secure file upload handling
+- Environment-based configuration
+
+#### Performance Features
+- Database connection pooling
+- Response caching where appropriate
+- Efficient pagination with cursors
+- Optimized database queries
+- Proper indexing strategy
+
+### 6. **Configuration Requirements**
+
+#### Environment Variables
+```bash
+# Database
+DB_HOST=localhost
+DB_PORT=5432
+DB_USER=vetstan
+DB_PASSWORD=password
+DB_NAME=vetstan_db
+
+# JWT
+JWT_SECRET=your-secret-key
+JWT_EXPIRE_HOURS=24
+
+# Server
+SERVER_PORT=8080
+SERVER_MODE=release
+
+# File Upload
+UPLOAD_PATH=./uploads
+MAX_FILE_SIZE=10485760
+
+# Rate Limiting
+RATE_LIMIT_REQUESTS=100
+RATE_LIMIT_WINDOW=15
+```
+
+### 7. **Response Format Standards**
+
+#### Success Response
+```json
+{
+  "success": true,
+  "data": {
+    // Response data
+  },
+  "message": "Operation completed successfully",
+  "timestamp": "2024-01-15T10:30:00Z"
+}
+```
+
+#### Error Response
+```json
+{
+  "success": false,
+  "error": {
+    "code": "VALIDATION_ERROR",
+    "message": "Invalid input data",
+    "details": [
+      {
+        "field": "name",
+        "message": "Name is required"
+      }
+    ]
+  },
+  "timestamp": "2024-01-15T10:30:00Z"
+}
+```
+
+#### Paginated Response
+```json
+{
+  "success": true,
+  "data": {
+    "items": [],
+    "pagination": {
+      "page": 1,
+      "size": 20,
+      "total": 100,
+      "pages": 5
+    }
+  }
+}
+```
+
+### 8. **Testing Requirements**
+- Unit tests for all service layer functions
+- Integration tests for API endpoints
+- Database migration tests
+- Authentication flow tests
+- File upload tests
+- Performance benchmarks for critical endpoints
+
+### 9. **Documentation Requirements**
+- Swagger/OpenAPI documentation for all endpoints
+- API usage examples
+- Database schema documentation
+- Deployment guide
+- Environment setup instructions
+
+### 10. **Deployment Considerations**
+- Docker containerization
+- Environment-specific configurations
+- Database migration scripts
+- Health check endpoints
+- Logging and monitoring setup
+- Backup and recovery procedures
+
+## Implementation Priority
+
+### Phase 1: Core Foundation
+1. Project setup and configuration
+2. Database models and migrations
+3. Authentication system
+4. Basic CRUD operations for dictionary
+
+### Phase 2: Main Modules
+1. Diseases, Drugs, Books, Instruments APIs
+2. Tests and Slides APIs
+3. Notes and Normal Ranges APIs
+4. Search functionality
+
+### Phase 3: Advanced Features
+1. File upload system
+2. About page management
+3. Enhanced search and filtering
+4. Performance optimizations
+
+### Phase 4: Production Ready
+1. Comprehensive testing
+2. Documentation
+3. Deployment setup
+4. Monitoring and logging
+
+## Success Criteria
+- All existing API endpoints replicated with identical functionality
+- Performance equal to or better than Python version
+- Comprehensive test coverage (>80%)
+- Complete API documentation
+- Production-ready deployment configuration
+- Backward compatibility with existing frontend
+
+## Notes for AI Implementation
+- Use Go best practices and idiomatic code
+- Follow clean architecture principles
+- Implement proper error handling and logging
+- Use dependency injection for services
+- Make the code maintainable and scalable
+- Include comprehensive comments and documentation
+- Consider security implications for all features
+- Optimize for performance and memory usage

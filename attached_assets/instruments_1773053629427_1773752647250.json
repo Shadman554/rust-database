@@ -1,0 +1,1633 @@
+{
+  "items": [
+    {
+      "id": "ac788b14-1619-4af4-9e06-7fab7f4aeb95",
+      "name": "Metzenbaum",
+      "description": "Soft tissue cutting",
+      "usage": null,
+      "category": "Scissors",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/metzenbaum-soft-tissue-cutting.jpg",
+      "created_at": "2025-10-23T12:07:03Z"
+    },
+    {
+      "id": "21445c76-67f5-4c8f-a522-73514eb19d6b",
+      "name": "Mayo Scissor",
+      "description": "Soft tissue cutting",
+      "usage": null,
+      "category": "Scissors",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/mayo-soft-tissue-cutting.jpg",
+      "created_at": "2025-10-23T11:02:17Z"
+    },
+    {
+      "id": "306b4076-a57d-4458-9713-8333b26e09a0",
+      "name": "Standard plain & toothed forceps",
+      "description": "Handle Soft tissue",
+      "usage": null,
+      "category": "Forceps",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/standard-plain-and-toothed-handle-soft-tissues.jpg",
+      "created_at": "2025-10-23T13:44:33Z"
+    },
+    {
+      "id": "0f8e8808-cf40-4d76-ba8c-cb4081562df9",
+      "name": "Spencer stitch",
+      "description": "For Removing Suture",
+      "usage": null,
+      "category": "Scissors",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/spencer-stitich-suture-removal.jpg",
+      "created_at": "2025-10-23T15:22:30Z"
+    },
+    {
+      "id": "3da9b7f6-731b-4339-8ceb-367a217f4b96",
+      "name": "Standard",
+      "description": "Suture Removal",
+      "usage": null,
+      "category": "Scissors",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/standard-suture-removal.jpg",
+      "created_at": "2025-10-23T15:23:19Z"
+    },
+    {
+      "id": "a94f9a4e-b577-494f-8e86-5cbe8887d7df",
+      "name": "Careless",
+      "description": "Suture Removal",
+      "usage": null,
+      "category": "Scissors",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/careless-suture-removal.jpg",
+      "created_at": "2025-10-23T15:27:27Z"
+    },
+    {
+      "id": "8dd740d3-8460-4795-999e-ac6c4eab0aae",
+      "name": "Lister",
+      "description": "Bandage cutting",
+      "usage": null,
+      "category": "Scissors",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/lister-bandage-cutting.jpg",
+      "created_at": "2025-10-23T15:27:28Z"
+    },
+    {
+      "id": "1b3292a4-8377-483b-964e-ee71fc5f4ee3",
+      "name": "Wire scissors",
+      "description": "Cutting stainless steel wire",
+      "usage": null,
+      "category": "Scissors",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/wire-scissor-cut-stainless-steel-wire.jpg",
+      "created_at": "2025-10-23T15:27:28Z"
+    },
+    {
+      "id": "8ac4aedf-8619-47d4-a156-76f2d180c9f4",
+      "name": "knowles Bandage scissors",
+      "description": "Cutting bandage and dressing",
+      "usage": null,
+      "category": "Scissors",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/knowles-bandage-scissors-remove-bandage-and-dressing.jpg",
+      "created_at": "2025-10-23T15:27:29Z"
+    },
+    {
+      "id": "769b93b8-231b-4452-a916-cae6a3b367d9",
+      "name": "Mosquito",
+      "description": "Holding small capillaries",
+      "usage": null,
+      "category": "Forceps",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/mosquito-hold-small-capillaries.jpg",
+      "created_at": "2025-10-23T15:30:55Z"
+    },
+    {
+      "id": "84cd0623-c42f-4a18-9611-52ba484e2085",
+      "name": "Adsons",
+      "description": "Holding soft tissues",
+      "usage": null,
+      "category": "Forceps",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/adsons-handle-soft-tissues.jpg",
+      "created_at": "2025-10-23T15:34:31Z"
+    },
+    {
+      "id": "9dc5a9de-d975-42b1-91ac-f01dcb24a5ad",
+      "name": "Continental standard",
+      "description": "Handling skin",
+      "usage": null,
+      "category": "Forceps",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/continental-standard-handle-skin.jpg",
+      "created_at": "2025-10-23T15:34:31Z"
+    },
+    {
+      "id": "9edcd129-6e46-42c5-a3bf-c80378368464",
+      "name": "Emmett",
+      "description": "Handle deep tissues",
+      "usage": null,
+      "category": "Forceps",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/emmett-handle-deep-tissues.jpg",
+      "created_at": "2025-10-23T15:34:32Z"
+    },
+    {
+      "id": "3d9436a2-7ae8-426d-8298-11edff022995",
+      "name": "Debakey",
+      "description": "Handling of Viscera",
+      "usage": null,
+      "category": "Forceps",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/debakey-handling-of-viscera.jpg",
+      "created_at": "2025-10-23T15:34:33Z"
+    },
+    {
+      "id": "ba55a993-c658-41bf-81ce-d4708f206495",
+      "name": "Babcock",
+      "description": "Handling of Viscera and soft tissues",
+      "usage": null,
+      "category": "Forceps",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/babcock-handling-of-viscera-and-soft-tissue.jpg",
+      "created_at": "2025-10-23T16:03:55Z"
+    },
+    {
+      "id": "00f378ed-176b-4019-b7f2-c5da0db5d150",
+      "name": "Allis",
+      "description": "Handling of soft tissues",
+      "usage": null,
+      "category": "Forceps",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/allis-handling-of-soft-tissue.jpg",
+      "created_at": "2025-10-23T16:03:56Z"
+    },
+    {
+      "id": "19c24dc0-0176-4717-b479-45c7323d834a",
+      "name": "Duval",
+      "description": "Handling viscera and tissues",
+      "usage": null,
+      "category": "Forceps",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/duval-handling-of-viscera-and-tissue.jpg",
+      "created_at": "2025-10-23T16:03:56Z"
+    },
+    {
+      "id": "8f06aec8-c9c7-4256-945b-231c9bc1f0ac",
+      "name": "Dayo Mayo Robinson",
+      "description": "Occlusion of stomach and intestines",
+      "usage": null,
+      "category": "Clamps or Hemostats",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/doyen-mayo-robinson-occlusion-of-stomach-and-intestine.jpg",
+      "created_at": "2025-10-23T16:03:57Z"
+    },
+    {
+      "id": "e0bc8d37-542d-46e6-b228-019bede1b7bb",
+      "name": "Parker Kerr",
+      "description": "Occlusion of cervix",
+      "usage": null,
+      "category": "Clamps or Hemostats",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/parker-kerr-occlusion-of-cervix.jpg",
+      "created_at": "2025-10-23T16:03:58Z"
+    },
+    {
+      "id": "51e242af-fa73-40a0-97f6-26b889e46ee4",
+      "name": "Cross action",
+      "description": "Attach drapes to the surgical area",
+      "usage": null,
+      "category": "Clamps or Hemostats",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/cross-action-attach-drapes-to-the-surgical-area.jpg",
+      "created_at": "2025-10-23T16:03:58Z"
+    },
+    {
+      "id": "5f203979-04d1-4941-b2c5-b903bf4debc6",
+      "name": "Backhaus",
+      "description": "Attach drapes to the surgical area",
+      "usage": null,
+      "category": "Clamps or Hemostats",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/backhaus-attach-drapes-to-the-surgical-area.jpg",
+      "created_at": "2025-10-23T16:03:59Z"
+    },
+    {
+      "id": "dc726df5-2903-437f-9f5f-84be64a5516d",
+      "name": "Scalpel handle",
+      "description": "Holding surgical blade",
+      "usage": null,
+      "category": "Scalpel",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/scalpel-handle-handle-surgical-blades.jpg",
+      "created_at": "2025-10-23T16:03:59Z"
+    },
+    {
+      "id": "214200bf-59dc-4d75-8af2-76964d909431",
+      "name": "Scalpel blade",
+      "description": "Make incision and tissue transection",
+      "usage": null,
+      "category": "Scalpel",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/scalpel-blades-make-incision-and-transaction.jpg",
+      "created_at": "2025-10-23T16:04:00Z"
+    },
+    {
+      "id": "78bfddef-d84a-4406-ae54-84da1f4ce23d",
+      "name": "Langenbeck ( Manual Retractor)",
+      "description": "Soft tissue retraction",
+      "usage": null,
+      "category": "Retractors",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/langenbeck-soft-tissue-retraction.jpg",
+      "created_at": "2025-10-23T16:04:01Z"
+    },
+    {
+      "id": "a2d102f5-d3c0-4102-87a3-b524789a4d27",
+      "name": "Volkman (Manual)",
+      "description": "Retraction of tendons and muscles",
+      "usage": null,
+      "category": "Retractors",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/volkman-retraction-of-tendons-and-muscles.jpg",
+      "created_at": "2025-10-23T16:04:01Z"
+    },
+    {
+      "id": "760e7792-b4c4-4ec5-a315-2d180ca00427",
+      "name": "Hohman",
+      "description": "Retraction of joints",
+      "usage": null,
+      "category": "Retractors",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/hohman-retraction-of-joints.jpg",
+      "created_at": "2025-10-23T16:04:02Z"
+    },
+    {
+      "id": "42e6f243-fb3a-43ed-bc0e-6215fcbdb267",
+      "name": "Czerny",
+      "description": "Soft tissue retraction",
+      "usage": null,
+      "category": "Retractors",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/czerny-soft-tissue-retraction.jpg",
+      "created_at": "2025-10-23T16:04:03Z"
+    },
+    {
+      "id": "a7776777-04de-4f58-a29c-168ed2e54fdf",
+      "name": "Gelpi (Automatic)",
+      "description": "Joints and Muscles retraction",
+      "usage": null,
+      "category": "Retractors",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/gelpi-joint-and-muscle-retraction.jpg",
+      "created_at": "2025-10-23T16:04:03Z"
+    },
+    {
+      "id": "d1a6fccb-8618-4a41-af60-ae386ffd4f6a",
+      "name": "Cone",
+      "description": "Used in orthopedic surgery",
+      "usage": null,
+      "category": "Retractors",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/cone-use-in-orthopedic-surgeries.jpg",
+      "created_at": "2025-10-23T16:04:04Z"
+    },
+    {
+      "id": "f0e3e8f4-a719-44a7-9112-35b9ada44b74",
+      "name": "Travers",
+      "description": "Joints and muscles retraction",
+      "usage": null,
+      "category": "Retractors",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/travers-joint-and-muscle-retraction.jpg",
+      "created_at": "2025-10-23T16:04:05Z"
+    },
+    {
+      "id": "5eaa6a97-07a9-424b-9e31-652422bd1ffb",
+      "name": "Gosset",
+      "description": "Abdominal wall retraction",
+      "usage": null,
+      "category": "Retractors",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/gosset-abdominal-wall-retraction.jpg",
+      "created_at": "2025-10-23T16:04:08Z"
+    },
+    {
+      "id": "afb3d6c5-5bb8-4417-b839-43c274ca3f8b",
+      "name": "Balfour",
+      "description": "Liver retraction",
+      "usage": null,
+      "category": "Retractors",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/balfour-liver-retraction.jpg",
+      "created_at": "2025-10-23T16:04:09Z"
+    },
+    {
+      "id": "f6a9981c-bc1f-401b-9d69-9df809ad7858",
+      "name": "Finochietto",
+      "description": "Spread Ribs",
+      "usage": null,
+      "category": "Retractors",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/finochietto-spread-ribs.jpg",
+      "created_at": "2025-10-23T16:04:09Z"
+    },
+    {
+      "id": "1a9c83e3-8601-4000-9830-abdba2808034",
+      "name": "Gillies",
+      "description": "Holding Needle and cut suture",
+      "usage": null,
+      "category": "Needle Holder",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/gillies-hold-needle-and-cut-suture.jpg",
+      "created_at": "2025-10-23T16:04:10Z"
+    },
+    {
+      "id": "b53e2e68-ce05-4f84-83e9-cf3023c78177",
+      "name": "Olsen Hegar",
+      "description": "Holding Needle and cut suture",
+      "usage": null,
+      "category": "Needle Holder",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/olsen-hegar-hold-needle-and-cut-suture.jpg",
+      "created_at": "2025-10-23T16:04:11Z"
+    },
+    {
+      "id": "a788a39a-3e9d-47db-bd86-f30bb280d29f",
+      "name": "Mayo Hegar",
+      "description": "Holding Needle",
+      "usage": null,
+      "category": "Needle Holder",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/mao-hegar-hold-needle.jpg",
+      "created_at": "2025-10-23T16:04:11Z"
+    },
+    {
+      "id": "70363214-5778-4d85-99f4-d9bf6e55bb83",
+      "name": "Bruce Clarke",
+      "description": "holding Needle",
+      "usage": null,
+      "category": "Needle Holder",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/bruce-clarke-hold-needle.jpg",
+      "created_at": "2025-10-23T16:04:12Z"
+    },
+    {
+      "id": "be93baf9-6398-4d99-9e4c-c976c9a77f4a",
+      "name": "Periosteal Elevator",
+      "description": "Raising periosteum before drilling",
+      "usage": null,
+      "category": "Orthopedic Surgical Equipment",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/periosteal-elevator-raise-periosteum-before-drilling.jpg",
+      "created_at": "2025-10-23T16:04:15Z"
+    },
+    {
+      "id": "1b0f0425-8414-4e6b-952d-877a2e8f9822",
+      "name": "Rongeurs",
+      "description": "Nibble Bone Pieces",
+      "usage": null,
+      "category": "Orthopedic Surgical Equipment",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/rongeurs-nibble-bone-pieces.jpg",
+      "created_at": "2025-10-23T16:04:16Z"
+    },
+    {
+      "id": "6425ae04-6706-4ef2-a4de-f7054aaf9f8a",
+      "name": "McPhail",
+      "description": "Hold needle",
+      "usage": null,
+      "category": "Needle Holder",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/mcphail-hold-needle.jpg",
+      "created_at": "2025-10-23T16:04:12Z"
+    },
+    {
+      "id": "44aa9314-dca0-487d-893a-c74fdd024aed",
+      "name": "Chisel",
+      "description": "Bone shaving",
+      "usage": null,
+      "category": "Orthopedic Surgical Equipment",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/chisel-bone-shaving.jpg",
+      "created_at": "2025-10-23T16:04:13Z"
+    },
+    {
+      "id": "1e6e592d-2ff2-4382-80a1-d9cc43bd47c4",
+      "name": "Mallet",
+      "description": "Used with Chisel for bone shaving (Hammer)",
+      "usage": null,
+      "category": "Orthopedic Surgical Equipment",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/mallet-to-use-chisel.jpg",
+      "created_at": "2025-10-23T16:04:16Z"
+    },
+    {
+      "id": "ea4cc136-7d49-42dc-8484-eb0b3d806a7a",
+      "name": "Paton bone cutting forceps",
+      "description": "Cut bone",
+      "usage": null,
+      "category": "Orthopedic Surgical Equipment",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/paton-bone-cutting-forceps-to-cut-bone.jpg",
+      "created_at": "2025-10-23T16:04:17Z"
+    },
+    {
+      "id": "85b8b1ba-927e-4b39-ac61-cc30898bf530",
+      "name": "Gouge",
+      "description": "Bone shaving",
+      "usage": null,
+      "category": "Orthopedic Surgical Equipment",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/gouge-bone-shaving.jpg",
+      "created_at": "2025-10-23T16:04:14Z"
+    },
+    {
+      "id": "edb3c370-28a2-4e2f-b639-8c38bc8922b7",
+      "name": "Osteotome",
+      "description": "Precise bone cutting",
+      "usage": null,
+      "category": "Orthopedic Surgical Equipment",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/osteotome-precise-bone-cut.jpg",
+      "created_at": "2025-10-23T16:04:14Z"
+    },
+    {
+      "id": "32df1d77-f3a1-4e42-9dd2-7c660fdb1471",
+      "name": "Ruskin Liston bone cutting forceps",
+      "description": "Cut bone",
+      "usage": null,
+      "category": "Orthopedic Surgical Equipment",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/ruskin-liston-bone-cutting-forceps-to-cut-bone.jpg",
+      "created_at": "2025-10-23T16:05:26Z"
+    },
+    {
+      "id": "d27a8250-c84c-4ced-9021-964f455099c3",
+      "name": "Ferguson bone holding forceps",
+      "description": "Prevention of bone movement during surgery",
+      "usage": null,
+      "category": "Orthopedic Surgical Equipment",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/ferguson-bone-holding-forceps-prevent-bone-movement-in-surgery.jpg",
+      "created_at": "2025-10-23T16:41:47Z"
+    },
+    {
+      "id": "1f8d0725-680e-471e-b634-6595e5459d8a",
+      "name": "Kern bone holding forceps",
+      "description": "Prevention of bone movement during Operation",
+      "usage": null,
+      "category": "Orthopedic Surgical Equipment",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/kern-bone-holding-forceps-prevent-bone-movement-in-surgery.jpg",
+      "created_at": "2025-10-23T16:41:47Z"
+    },
+    {
+      "id": "5a839173-d032-49ec-a813-d043cf150a73",
+      "name": "Hey Groove bone holding forceps",
+      "description": "Maintain tip closure",
+      "usage": null,
+      "category": "Orthopedic Surgical Equipment",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/hey-groove-bone-holding-forceps-maintain-tip-closure.jpg",
+      "created_at": "2025-10-23T16:41:48Z"
+    },
+    {
+      "id": "61ae4928-63bb-4865-88bd-83529e002879",
+      "name": "Jacob Chuck",
+      "description": "Insert or Remove pins (Intramedullary pinning)",
+      "usage": null,
+      "category": "Orthopedic Surgical Equipment",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/jacob-chuck-intramedullary-pinning-inserting-and-removing-of-pins.jpg",
+      "created_at": "2025-10-23T16:41:49Z"
+    },
+    {
+      "id": "a64691a7-8729-49a9-88ce-488c627a9a17",
+      "name": "Iris scissors",
+      "description": "To cut iris",
+      "usage": null,
+      "category": "Ophthalmic Surgical Instruments",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/iris-scissors-to-cut-iris.jpg",
+      "created_at": "2025-10-23T16:41:49Z"
+    },
+    {
+      "id": "149237b6-1ad1-4e78-8d32-e15a087d9c31",
+      "name": "Castroviejo scissor",
+      "description": "Cut lens capsule",
+      "usage": null,
+      "category": "Ophthalmic Surgical Instruments",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/castroviejo-scissors-cut-lens-capsule.jpg",
+      "created_at": "2025-10-23T16:41:50Z"
+    },
+    {
+      "id": "b4c29fb1-5aeb-47f1-a669-911ed5ed42b5",
+      "name": "Chalazion forceps",
+      "description": "Stabilize eyelid and protect globe",
+      "usage": null,
+      "category": "Ophthalmic Surgical Instruments",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/chalazion-forceps-stabilize-eyelid-and-protect-globe.jpg",
+      "created_at": "2025-10-23T16:41:51Z"
+    },
+    {
+      "id": "6ac4c13f-a95d-44aa-a21c-5b5d995ab1d6",
+      "name": "Benet cilia forceps",
+      "description": "For plucking eyelashes",
+      "usage": null,
+      "category": "Ophthalmic Surgical Instruments",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/benet-cilia-forceps-for-plucking-eyelashes.jpg",
+      "created_at": "2025-10-23T16:41:52Z"
+    },
+    {
+      "id": "ff4ec4fb-7139-466a-b44d-795bd8bb3e93",
+      "name": "Catford forceps",
+      "description": "Help in risk-free suturing",
+      "usage": null,
+      "category": "Ophthalmic Surgical Instruments",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/catford-forceps-help-in-riskfree-suturing.jpg",
+      "created_at": "2025-10-23T16:41:52Z"
+    },
+    {
+      "id": "1433aa5f-3b0c-48dc-ad43-f97b608d8730",
+      "name": "Capsulorhexis forceps",
+      "description": "Grasp lens capsule",
+      "usage": null,
+      "category": "Ophthalmic Surgical Instruments",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/capsulorhexis-forceps-grasp-lens-capsule.jpg",
+      "created_at": "2025-10-23T16:41:53Z"
+    },
+    {
+      "id": "1cd1251b-20b3-40b2-b1a7-ef1d12470e5f",
+      "name": "Micro corneal tying forceps",
+      "description": "Tie suture material",
+      "usage": null,
+      "category": "Ophthalmic Surgical Instruments",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/micro-corneal-tying-forceps-tie-suture-material.jpg",
+      "created_at": "2025-10-23T16:41:54Z"
+    },
+    {
+      "id": "63389b91-cb11-4ad7-8264-b509f28e7fb3",
+      "name": "Capsule forceps",
+      "description": "Grabs lens capsule",
+      "usage": null,
+      "category": "Ophthalmic Surgical Instruments",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/capsule-forceps-grabs-lens-capsule.jpg",
+      "created_at": "2025-10-23T16:41:54Z"
+    },
+    {
+      "id": "5dcafe05-b39d-4428-85b3-d664c190de16",
+      "name": "Kirby expressed hook",
+      "description": "Used for lens removal",
+      "usage": null,
+      "category": "Ophthalmic Surgical Instruments",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/kirby-expressed-hook-use-for-lens-removal.jpg",
+      "created_at": "2025-10-23T16:41:55Z"
+    },
+    {
+      "id": "7336ffd0-5090-40f6-81b2-f7df367f107a",
+      "name": "Williams speculums",
+      "description": "Provide acces to eyeball by a retraction",
+      "usage": null,
+      "category": "Ophthalmic Surgical Instruments",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/williams-speculum-provide-access-to-eyeball-by-a-retraction.jpg",
+      "created_at": "2025-10-23T16:41:55Z"
+    },
+    {
+      "id": "c6b349e9-8fca-4faf-b82d-fb8c267df850",
+      "name": "Baaraquer speculum",
+      "description": "Provide acces to eyeball by a retraction",
+      "usage": null,
+      "category": "Ophthalmic Surgical Instruments",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/barraquer-speculum-provide-access-to-eyeball-by-a-retraction.jpg",
+      "created_at": "2025-10-23T16:41:56Z"
+    },
+    {
+      "id": "82e9f9be-cb17-4628-baf7-cfe67acf4c98",
+      "name": "Nettleship dilator",
+      "description": "Dilation of narrow canals",
+      "usage": null,
+      "category": "Ophthalmic Surgical Instruments",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/nettleship-dilator-dilate-narrow-canals.jpg",
+      "created_at": "2025-10-23T16:41:56Z"
+    },
+    {
+      "id": "5fb253f5-7dfb-454d-bcf4-f6479a23521b",
+      "name": "Castroviejo needle holder",
+      "description": "Holding Needle during surgery",
+      "usage": null,
+      "category": "Ophthalmic Surgical Instruments",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/castroviejo-needle-holder-hold-needle-during-suturing.jpg",
+      "created_at": "2025-10-23T16:41:57Z"
+    },
+    {
+      "id": "ee0bec6a-a8a2-4ad0-b9e5-db7def8565a2",
+      "name": "Extraction forceps",
+      "description": "Extraction of tooth",
+      "usage": null,
+      "category": "Dental Instruments",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/extraction-forceps-extract-tooth.jpg",
+      "created_at": "2025-10-23T16:41:57Z"
+    },
+    {
+      "id": "ad523b73-952f-4fe2-bf4c-11c03f0924fd",
+      "name": "Dental elevator",
+      "description": "To separate connection between teeth and bone",
+      "usage": null,
+      "category": "Dental Instruments",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/dental-elevator-to-separate-connection-of-teeth-and-bone.jpg",
+      "created_at": "2025-10-23T16:41:58Z"
+    },
+    {
+      "id": "731ad26a-6c67-4bc7-bd08-ada96939e92a",
+      "name": "Periosteal Elevator",
+      "description": "To expose bone",
+      "usage": null,
+      "category": "Dental Instruments",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/periosteal-elevator-to-expose-bone.jpg",
+      "created_at": "2025-10-23T16:41:58Z"
+    },
+    {
+      "id": "39008679-c7b0-4228-9e49-5867c115f348",
+      "name": "Subgingival curette",
+      "description": "Remove the unwanted thing from the mouth",
+      "usage": null,
+      "category": "Dental Instruments",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/subgingival-curette-remove-the-unwanted-thing-from-the-mouth.jpg",
+      "created_at": "2025-10-23T16:41:59Z"
+    },
+    {
+      "id": "8ae0b414-5b25-40c0-a865-8802fe670fc0",
+      "name": "Dental explorer",
+      "description": "Expose the hard surface of teeth",
+      "usage": null,
+      "category": "Dental Instruments",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/dental-explorer-expose-the-hard-surface-of-teeth.jpg",
+      "created_at": "2025-10-23T16:42:00Z"
+    },
+    {
+      "id": "59e7e8fe-dbfa-49f4-a51d-2a8ec7fabb80",
+      "name": "Supragingival scalers",
+      "description": "Remove supragingival calculus",
+      "usage": null,
+      "category": "Dental Instruments",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/supragingival-scalers-remove-the-unwanted-thing-from-the-mouth.jpg",
+      "created_at": "2025-10-23T16:42:00Z"
+    },
+    {
+      "id": "76e3703e-c787-4660-b95a-0c8564768fd2",
+      "name": "Periodontal probe",
+      "description": "Measure depth of periodontal pocket",
+      "usage": null,
+      "category": "Dental Instruments",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/periodontal-probe-measure-depth-of-periodontal-pocket.jpg",
+      "created_at": "2025-10-23T16:42:01Z"
+    },
+    {
+      "id": "ba4b4b4c-dc91-4e45-8c0b-2d180e68a9c3",
+      "name": "Sharpening stone",
+      "description": "For sharpening of instrument",
+      "usage": null,
+      "category": "Dental Instruments",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/sharpening-stone-for-sharpening-instruments.jpg",
+      "created_at": "2025-10-23T16:42:01Z"
+    },
+    {
+      "id": "eff3ad96-192d-4b82-8475-dd51b14f8252",
+      "name": "Kocher clamp",
+      "description": "Grasp heavy tissues",
+      "usage": null,
+      "category": "Plastic Surgery Instruments",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/kocher-clamp-grasp-heavy-tissues.jpg",
+      "created_at": "2025-10-23T21:14:52Z"
+    },
+    {
+      "id": "6e8cb901-5df6-44d5-9675-218837f075ba",
+      "name": "Dilator",
+      "description": "Open teat canal",
+      "usage": null,
+      "category": "Teat Instruments",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/dilator-open-teat-canal.jpg",
+      "created_at": "2025-10-23T22:55:47Z"
+    },
+    {
+      "id": "0578833c-1aff-49dd-b79c-7a1d758136da",
+      "name": "Slitter",
+      "description": "Clean the teat canal by an incision from inside to outside",
+      "usage": null,
+      "category": "Teat Instruments",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/slitter-clear-the-teat-canal-by-incision-from-inside-to-outside.jpg",
+      "created_at": "2025-10-23T22:55:48Z"
+    },
+    {
+      "id": "155d7eb9-395d-4ead-9bdf-b702cec8d5ff",
+      "name": "Tumor extractor",
+      "description": "Remove fibrous material from teat canal",
+      "usage": null,
+      "category": "Teat Instruments",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/tumor-extractor-remove-fibrous-material-from-teat-canal.jpg",
+      "created_at": "2025-10-23T22:55:49Z"
+    },
+    {
+      "id": "dfb41405-83f0-43ba-9f94-55dd15490ef3",
+      "name": "Udder infusion cannula",
+      "description": "administration of medicine to teat canal",
+      "usage": null,
+      "category": "Teat Instruments",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/udder-infusion-canula-administer-medicine-in-teat-canal.jpg",
+      "created_at": "2025-10-23T22:55:49Z"
+    },
+    {
+      "id": "ca34e3f1-3a0c-4b23-b3d3-9d6a1529a9bf",
+      "name": "Teat curette",
+      "description": "Clean inside of the teat",
+      "usage": null,
+      "category": "Teat Instruments",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/teat-curette-clean-inside-of-teat-canal.jpg",
+      "created_at": "2025-10-23T22:55:50Z"
+    },
+    {
+      "id": "242bf856-631d-4148-be97-57a33a00d2af",
+      "name": "Milking tube",
+      "description": "Keep injured teat open",
+      "usage": null,
+      "category": "Teat Instruments",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/milking-tubes-keep-injured-teat-open.jpg",
+      "created_at": "2025-10-23T22:55:51Z"
+    },
+    {
+      "id": "d0d410f5-0182-413b-9c51-c89182ec5dd1",
+      "name": "Rankin clamp",
+      "description": "Clamp tissues for ligation",
+      "usage": null,
+      "category": "Plastic Surgery Instruments",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/rankin-clamp-clamp-tissues-for-ligation.jpg",
+      "created_at": "2025-10-23T22:55:53Z"
+    },
+    {
+      "id": "b04fc125-0ae0-488e-8720-34ee4f196ca8",
+      "name": "Schmidt clamp",
+      "description": "Suturing stalk of tissues",
+      "usage": null,
+      "category": "Plastic Surgery Instruments",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/schmidt-clamp-suturing-stalk-of-tissues.jpg",
+      "created_at": "2025-10-23T22:55:54Z"
+    },
+    {
+      "id": "a6668ac9-4ddd-48eb-8570-52f2ce6aa166",
+      "name": "Dressing forceps",
+      "description": "Dressing wounds",
+      "usage": null,
+      "category": "Plastic Surgery Instruments",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/dressing-forceps-dressing-wounds.jpg",
+      "created_at": "2025-10-23T22:55:55Z"
+    },
+    {
+      "id": "d0599147-ca43-4c0c-97c7-1178ec20988f",
+      "name": "Adsons forceps",
+      "description": "Hold dressing material",
+      "usage": null,
+      "category": "Plastic Surgery Instruments",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/adson-forceps-hold-dressing-material.jpg",
+      "created_at": "2025-10-23T22:55:56Z"
+    },
+    {
+      "id": "1c9ad3d3-ee8e-48b5-bf87-92396aeeb152",
+      "name": "DeBakey forceps",
+      "description": "Avoid tissue damage",
+      "usage": null,
+      "category": "Plastic Surgery Instruments",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/debakey-forceps-avoid-tissue-damage.jpg",
+      "created_at": "2025-10-23T22:55:56Z"
+    },
+    {
+      "id": "479114be-0c39-4629-b87f-e6a6e26aa848",
+      "name": "Jansen forceps",
+      "description": "Remove boney spetum",
+      "usage": null,
+      "category": "Plastic Surgery Instruments",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/jansen-forceps-remove-boney-septum.jpg",
+      "created_at": "2025-10-23T22:55:57Z"
+    },
+    {
+      "id": "3ae2ffc8-4d90-4507-b0e2-5dcb0f226c90",
+      "name": "Wilde forceps",
+      "description": "Stop nasal bleeding",
+      "usage": null,
+      "category": "Plastic Surgery Instruments",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/wilde-forceps-stop-nasal-bleeding.jpg",
+      "created_at": "2025-10-23T22:55:57Z"
+    },
+    {
+      "id": "02b0d10a-1df9-4126-adf1-50e6726f19e7",
+      "name": "Mayo scissors",
+      "description": "Cut tissue and suture",
+      "usage": null,
+      "category": "Plastic Surgery Instruments",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/mayo-scissors-cut-tissue-and-suture.jpg",
+      "created_at": "2025-10-23T22:55:58Z"
+    },
+    {
+      "id": "52956297-d4a4-4df8-aa68-95b9c9a6104c",
+      "name": "Joseph scissors",
+      "description": "Cut tissues and sutures",
+      "usage": null,
+      "category": "Plastic Surgery Instruments",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/joseph-scissors-cut-tissues-and-sutures.jpg",
+      "created_at": "2025-10-23T22:55:59Z"
+    },
+    {
+      "id": "65f96705-7fd1-491f-8945-8c5e5ee2b71b",
+      "name": "Aufrect scissors",
+      "description": "Cut delicate tissues",
+      "usage": null,
+      "category": "Plastic Surgery Instruments",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/aufrect-scissors-cut-delicate-tissues.jpg",
+      "created_at": "2025-10-23T22:56:00Z"
+    },
+    {
+      "id": "3ad0ee45-a0dc-429e-a7c6-4501918eae8f",
+      "name": "Adson suction tube",
+      "description": "Aspire blood and residues",
+      "usage": null,
+      "category": "Plastic Surgery Instruments",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/adson-suction-tube-aspire-blood-and-residues.jpg",
+      "created_at": "2025-10-23T22:56:02Z"
+    },
+    {
+      "id": "e219d826-032c-4b39-8f40-bbdfd5d0dd03",
+      "name": "Baron suction tube",
+      "description": "Remove fluid and debris",
+      "usage": null,
+      "category": "Plastic Surgery Instruments",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/baron-suction-tube-remove-fluid-and-debris.jpg",
+      "created_at": "2025-10-23T22:56:02Z"
+    },
+    {
+      "id": "a8a442f4-c917-435a-8e9c-b2df23cc8810",
+      "name": "Bear claw retractor",
+      "description": "Help in facelift",
+      "usage": null,
+      "category": "Plastic Surgery Instruments",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/bear-claw-retractor-help-in-a-facelift.jpg",
+      "created_at": "2025-10-23T22:56:04Z"
+    },
+    {
+      "id": "0160dffc-adfc-4401-949d-1eb6915ae1d8",
+      "name": "Lovelace gallbladder forceps",
+      "description": "Grab gallstones",
+      "usage": null,
+      "category": "Gastrointestinal Instruments",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/lovelace-gallbladder-forceps-grab-gallstones.jpg",
+      "created_at": "2025-10-23T22:56:06Z"
+    },
+    {
+      "id": "dacca260-4f52-47bd-8487-f0b25570f60f",
+      "name": "Mixter gallstones forceps",
+      "description": "Manipulation stone with precision",
+      "usage": null,
+      "category": "Gastrointestinal Instruments",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/mixter-gallstone-forceps-manipulate-stone-with-precision.jpg",
+      "created_at": "2025-10-23T22:56:06Z"
+    },
+    {
+      "id": "684d936b-25fe-48a3-bccc-6c9d24c0243c",
+      "name": "Mayo gallstone scoop",
+      "description": "Scoop out gallstones",
+      "usage": null,
+      "category": "Gastrointestinal Instruments",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/mayo-gallstone-scoop-scoop-out-gallstone-from-the-gallbladder.jpg",
+      "created_at": "2025-10-23T22:56:07Z"
+    },
+    {
+      "id": "47a90249-3c65-46bb-a806-2b466aa466c6",
+      "name": "Oschner trocar",
+      "description": "Drain fluids from collapsed cavities",
+      "usage": null,
+      "category": "Gastrointestinal Instruments",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/oschner-trocar-drain-fluids-from-collapsed-cavities.jpg",
+      "created_at": "2025-10-23T22:56:08Z"
+    },
+    {
+      "id": "5475e6f6-ed39-41b0-a117-169981c5f39f",
+      "name": "Bookwalter retractor",
+      "description": "Increase access to surgical site",
+      "usage": null,
+      "category": "Gastrointestinal Instruments",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/bookwalter-retractor-increase-access-to-operating-sight.jpg",
+      "created_at": "2025-10-23T22:56:10Z"
+    },
+    {
+      "id": "28ed84c4-d8ff-4e32-9443-d9e02c05601c",
+      "name": "Benson pylorus dilator",
+      "description": "Grip organs (organ tissues) and membranes",
+      "usage": null,
+      "category": "Gastrointestinal Instruments",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/benson-pylorus-dilator-grip-organ-tissues-and-membranes.jpg",
+      "created_at": "2025-10-23T22:56:10Z"
+    },
+    {
+      "id": "d868b5f9-0c08-4a46-8388-bb81acc205fd",
+      "name": "Esophageal dilator",
+      "description": "Dilation of esophagus",
+      "usage": null,
+      "category": "Gastrointestinal Instruments",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/esophageal-dilator-dilate-esophagus.jpg",
+      "created_at": "2025-10-23T22:56:11Z"
+    },
+    {
+      "id": "b12a15d8-7916-4cc7-ab0f-e83b42e2bc2b",
+      "name": "Mayo-Noble scissors",
+      "description": "Dissect tissues and skin",
+      "usage": null,
+      "category": "Gastrointestinal Instruments",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/mayonoble-scissors-dissect-dead-tissues-organs-and-skin.jpg",
+      "created_at": "2025-10-23T22:56:12Z"
+    },
+    {
+      "id": "150e1d32-905c-44ed-ae47-62d76710ee8d",
+      "name": "Scudder intestinal clamp",
+      "description": "Clamp blood vessels",
+      "usage": null,
+      "category": "Gastrointestinal Instruments",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/scudder-intestinal-clamp-clamp-blood-vessels.jpg",
+      "created_at": "2025-10-23T22:56:13Z"
+    },
+    {
+      "id": "061f1434-39d2-4108-a090-c2525c0945a1",
+      "name": "Dennis clamp",
+      "description": "Hold tissues",
+      "usage": null,
+      "category": "Gastrointestinal Instruments",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/dennis-clamp-hold-tissues.jpg",
+      "created_at": "2025-10-23T22:56:14Z"
+    },
+    {
+      "id": "7a4939cc-5f2f-4f47-9bd4-53cf22140673",
+      "name": "Foss intestinal clamp",
+      "description": "Clamp bowel",
+      "usage": null,
+      "category": "Gastrointestinal Instruments",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/foss-intestinal-clamp-clamp-bowel.jpg",
+      "created_at": "2025-10-23T22:56:15Z"
+    },
+    {
+      "id": "58504314-c1a7-4c04-aec6-8f82c0d6afeb",
+      "name": "Fehland intestinal clamp",
+      "description": "Clamp bleeding site",
+      "usage": null,
+      "category": "Gastrointestinal Instruments",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/fehland-intestinal-clamp-clamp-bleeding-site.jpg",
+      "created_at": "2025-10-23T22:56:15Z"
+    },
+    {
+      "id": "4e58570a-5713-4673-9fd6-67d9223df7e4",
+      "name": "Bainbridge forceps",
+      "description": "Lock bleeding vessels",
+      "usage": null,
+      "category": "Gastrointestinal Instruments",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/bainbridge-forceps-lock-bleeding-vessels.jpg",
+      "created_at": "2025-10-23T22:56:16Z"
+    },
+    {
+      "id": "c5deacd9-ad3d-43e4-ab34-b9d212ed9c75",
+      "name": "Busch scissors",
+      "description": "Cut umbilical cords",
+      "usage": null,
+      "category": "Gastrointestinal Instruments",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/busch-scissors-cut-umbilical-cords.jpg",
+      "created_at": "2025-10-23T22:56:17Z"
+    },
+    {
+      "id": "4237bd61-f1de-4114-bfd6-3fcc4453d341",
+      "name": "Lichety teat knife",
+      "description": "Open stenotic teats",
+      "usage": null,
+      "category": "Teat Instruments",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/lichty-teat-knife-open-stenotic-teats.jpg",
+      "created_at": "2025-10-23T22:55:50Z"
+    },
+    {
+      "id": "09cf6c21-b6e4-439f-9cba-4b865965e04c",
+      "name": "Kelly clamp",
+      "description": "Hold heavy tissues",
+      "usage": null,
+      "category": "Plastic Surgery Instruments",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/kelly-clamp-hold-heavy-tissues.png",
+      "created_at": "2025-10-23T22:55:52Z"
+    },
+    {
+      "id": "2f2c4b4f-a0a3-4d53-8015-74adc7ff49b3",
+      "name": "Crile clamp",
+      "description": "Hold suture ending",
+      "usage": null,
+      "category": "Plastic Surgery Instruments",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/crile-clamp-hold-suture-ends.jpg",
+      "created_at": "2025-10-23T22:55:52Z"
+    },
+    {
+      "id": "f2ae56f5-f78e-460d-8e99-5970af08a0ce",
+      "name": "Rochester pean clamp",
+      "description": "Clamp larger vessels",
+      "usage": null,
+      "category": "Plastic Surgery Instruments",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/rochester-pean-clamp-clamp-larger-vessels.jpg",
+      "created_at": "2025-10-23T22:55:53Z"
+    },
+    {
+      "id": "88391f3a-2133-4b7c-8a8e-16fe65c248dd",
+      "name": "Moynihan clamp",
+      "description": "Suturing of vesicular tissues",
+      "usage": null,
+      "category": "Plastic Surgery Instruments",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/moynihan-clamp-suturing-of-vascular-tissues.jpg",
+      "created_at": "2025-10-23T22:55:54Z"
+    },
+    {
+      "id": "ac520da0-6d21-4ba3-9b4e-35a4cf1bcbd2",
+      "name": "Martin scissors",
+      "description": "Cut cartilage",
+      "usage": null,
+      "category": "Plastic Surgery Instruments",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/martin-scissors-cut-cartilage.jpg",
+      "created_at": "2025-10-23T22:55:58Z"
+    },
+    {
+      "id": "34abb182-81a8-41f5-90fb-41d8ddb10230",
+      "name": "Forman",
+      "description": "Dissect nasal cartilage",
+      "usage": null,
+      "category": "Plastic Surgery Instruments",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/forman-scissors-dissect-nasal-cartilage.jpg",
+      "created_at": "2025-10-23T22:55:59Z"
+    },
+    {
+      "id": "67a30d2e-1402-4c28-86f2-c05e2da26915",
+      "name": "Lister bandage scissors",
+      "description": "Cut dressing and bandage",
+      "usage": null,
+      "category": "Plastic Surgery Instruments",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/lister-bandage-scissors-cut-dressing-and-bandages.jpg",
+      "created_at": "2025-10-23T22:56:00Z"
+    },
+    {
+      "id": "cbbb9464-8a60-44ab-a0fc-29009367b91c",
+      "name": "Frazier suction tube",
+      "description": "Remove debris and fluids from surgical space",
+      "usage": null,
+      "category": "Plastic Surgery Instruments",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/frazier-suction-tube-remove-debris-and-fluid-from-surgical-spaces.jpg",
+      "created_at": "2025-10-23T22:56:01Z"
+    },
+    {
+      "id": "e6faa97f-4f30-4b7a-a55b-42a531a7a544",
+      "name": "Army navy retractor",
+      "description": "Retraction of bone and skin",
+      "usage": null,
+      "category": "Plastic Surgery Instruments",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/army-navy-retractor-retract-bone-and-skin.jpg",
+      "created_at": "2025-10-23T22:56:03Z"
+    },
+    {
+      "id": "d03b5975-0760-4693-9a22-cf7b322b5312",
+      "name": "Murphy retractor",
+      "description": "Retraction of delicate tissues",
+      "usage": null,
+      "category": "Plastic Surgery Instruments",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/murphy-retractor-retract-delicate-tissues.jpg",
+      "created_at": "2025-10-23T22:56:03Z"
+    },
+    {
+      "id": "8998170e-ee56-40da-b352-318626f412d9",
+      "name": "Gillies skin hook",
+      "description": "Retract skin",
+      "usage": null,
+      "category": "Plastic Surgery Instruments",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/gilles-skin-hook-retract-skin.jpg",
+      "created_at": "2025-10-23T22:56:04Z"
+    },
+    {
+      "id": "f73b9380-5a91-4615-b628-7fc68cbfea77",
+      "name": "Jansen Retractor",
+      "description": "Spread tissues",
+      "usage": null,
+      "category": "Plastic Surgery Instruments",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/jansen-retractor-spread-tissues.jpg",
+      "created_at": "2025-10-23T22:56:05Z"
+    },
+    {
+      "id": "d40868ed-e13e-4e24-9d86-a13af075c744",
+      "name": "Collin gallbladder forceps",
+      "description": "Holding and removing gallstones",
+      "usage": null,
+      "category": "Gastrointestinal Instruments",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/collin-gallbladder-forceps-holding-and-removal-of-gallstones.jpg",
+      "created_at": "2025-10-23T22:56:05Z"
+    },
+    {
+      "id": "3c355a47-6310-48ec-8879-765488c65cd6",
+      "name": "Ferguson gallstones scoop",
+      "description": "Remove stones from the gallbladder",
+      "usage": null,
+      "category": "Gastrointestinal Instruments",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/ferguson-gallstone-scoop-remove-stones-from-the-gallbladder.jpg",
+      "created_at": "2025-10-23T22:56:08Z"
+    },
+    {
+      "id": "c545f696-d9a6-4dc9-90de-b474f9258f31",
+      "name": "Kidney stones forceps",
+      "description": "Remove the stones from bile duct",
+      "usage": null,
+      "category": "Gastrointestinal Instruments",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/kidney-stone-forceps-remove-the-stone-from-the-bile-duct.jpg",
+      "created_at": "2025-10-23T22:56:09Z"
+    },
+    {
+      "id": "624c7238-4cf0-43ed-844e-87bc64b3672b",
+      "name": "Wishbone Retractor",
+      "description": "Abdominal tissue retraction (used in all abdominal procedure)",
+      "usage": null,
+      "category": "Gastrointestinal Instruments",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/wishbone-retractor-used-in-all-abdominal-procedures.jpg",
+      "created_at": "2025-10-23T22:56:09Z"
+    },
+    {
+      "id": "6c8d58a7-0a50-48b0-bd87-26f44a92d24b",
+      "name": "Mayo-Robson forceps",
+      "description": "Hold bowel",
+      "usage": null,
+      "category": "Gastrointestinal Instruments",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/mayorobson-forceps-hold-bowel.jpg",
+      "created_at": "2025-10-23T22:56:12Z"
+    },
+    {
+      "id": "ac51f4f5-8903-4f15-846b-a4dbf4c00db8",
+      "name": "Doyen clamp",
+      "description": "A-traumatic grasping",
+      "usage": null,
+      "category": "Gastrointestinal Instruments",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/doyen-clamp-atraumatic-grasping.jpg",
+      "created_at": "2025-10-23T22:56:13Z"
+    },
+    {
+      "id": "4f64bb61-3a9d-4e65-ab4d-b3071a2c53b5",
+      "name": "Dubois scissors",
+      "description": "Deep dissection",
+      "usage": null,
+      "category": "Gastrointestinal Instruments",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/dubois-scissors-deep-dissection.jpg",
+      "created_at": "2025-10-23T22:56:16Z"
+    },
+    {
+      "id": "d59cf923-d731-41a3-9b26-739af931c0af",
+      "name": "Terminal end stapler",
+      "description": "Close the enterotomies",
+      "usage": null,
+      "category": "Gastrointestinal Instruments",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/terminal-end-stapler-close-the-enterotomies.jpg",
+      "created_at": "2025-10-23T22:56:17Z"
+    },
+    {
+      "id": "0d09c520-949d-4d60-86b8-004b7a0be622",
+      "name": "Buie pile clamp",
+      "description": "Grasp hemorrhoids",
+      "usage": null,
+      "category": "Gastrointestinal Instruments",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/buie-pile-clamp-grasp-hemorrhoids.jpg",
+      "created_at": "2025-10-23T22:56:19Z"
+    },
+    {
+      "id": "8243ca8f-46d5-4cb9-a151-52dc67892d1d",
+      "name": "Sims scissors",
+      "description": "Cutting bandages and dead tissues",
+      "usage": null,
+      "category": "Gastrointestinal Instruments",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/sims-scissors-cut-bandages-dead-tissues.jpg",
+      "created_at": "2025-10-23T22:56:21Z"
+    },
+    {
+      "id": "f74957a2-c8e0-4720-b637-d773f0490c0d",
+      "name": "Kelly fistula scissors",
+      "description": "cut tissues",
+      "usage": null,
+      "category": "Gastrointestinal Instruments",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/kelly-fistula-scissors-cut-tissues.jpg",
+      "created_at": "2025-10-23T22:56:21Z"
+    },
+    {
+      "id": "b0d98712-6337-4d77-9f67-8509dfe082f5",
+      "name": "Yeoman biopsy forceps",
+      "description": "Used for diagnosis",
+      "usage": null,
+      "category": "Gastrointestinal Instruments",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/yeoman-biopsy-forceps-used-for-diagnosis.jpg",
+      "created_at": "2025-10-23T22:56:22Z"
+    },
+    {
+      "id": "bf60b0d9-2ae8-4b5d-9b51-04fde7ae6dac",
+      "name": "Buie fistula probe",
+      "description": "help in viewing anal sac",
+      "usage": null,
+      "category": "Gastrointestinal Instruments",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/buie-fistula-probe-help-in-viewing-anal-sac.jpg",
+      "created_at": "2025-10-23T22:56:23Z"
+    },
+    {
+      "id": "4a796823-9829-4712-9623-c1fc2a17526b",
+      "name": "Sawyer retractor",
+      "description": "Provide access to lower rectum",
+      "usage": null,
+      "category": "Gastrointestinal Instruments",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/sawyer-retractor-provide-access-to-lower-rectum.jpg",
+      "created_at": "2025-10-23T22:56:24Z"
+    },
+    {
+      "id": "3e38412e-a083-46fa-b50e-fc412914f81f",
+      "name": "Hirschman anoscope",
+      "description": "Visualize the anal area (lower rectum)",
+      "usage": null,
+      "category": "Gastrointestinal Instruments",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/hirschman-anoscope-visualize-the-anal-area-and-lower-rectum.jpg",
+      "created_at": "2025-10-23T22:56:25Z"
+    },
+    {
+      "id": "ece83af8-ff76-4298-af91-662b17a14ecd",
+      "name": "Fansler-Ives anoscope",
+      "description": "Help in Examining incision area",
+      "usage": null,
+      "category": "Gastrointestinal Instruments",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/fanslerives-anoscope-help-in-examining-incision-area.jpg",
+      "created_at": "2025-10-23T22:56:25Z"
+    },
+    {
+      "id": "3741c89b-e0a1-4953-9bbe-8d2b7943108f",
+      "name": "Pratt rectal speculum",
+      "description": "Dilation of anal area",
+      "usage": null,
+      "category": "Gastrointestinal Instruments",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/pratt-rectal-speculum-dilate-anal-area.jpg",
+      "created_at": "2025-10-23T22:56:28Z"
+    },
+    {
+      "id": "e7c06fb2-e9b2-453f-8b14-119b8f1242be",
+      "name": "Leaflet retractor",
+      "description": "Used in cardiac surgery",
+      "usage": null,
+      "category": "Cardiothoracic And Vascular Surgical Instruments",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/leaflet-retractor-used-in-cardiac-surgery.jpg",
+      "created_at": "2025-10-23T22:56:35Z"
+    },
+    {
+      "id": "703dc98f-8439-4dc7-817d-9d3e6503b64a",
+      "name": "Vessels Punch",
+      "description": "Create an opening in vessels",
+      "usage": null,
+      "category": "Cardiothoracic And Vascular Surgical Instruments",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/vessel-punch-create-an-opening-in-vessels.jpg",
+      "created_at": "2025-10-23T22:56:36Z"
+    },
+    {
+      "id": "73a0e9fa-873f-4396-9a66-59b379e06181",
+      "name": "Intraluminal stapler",
+      "description": "Seal tissues in colostomy",
+      "usage": null,
+      "category": "Gastrointestinal Instruments",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/intraluminal-stapler-seal-tissues-in-colostomy.jpg",
+      "created_at": "2025-10-23T22:56:18Z"
+    },
+    {
+      "id": "25736a7a-9e52-450a-841a-e509e32249e8",
+      "name": "GI anastomosis stapler",
+      "description": "Staple transected tube",
+      "usage": null,
+      "category": "Gastrointestinal Instruments",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/gastrointestinal-anastomosis-stapler-staple-transected-tube.jpg",
+      "created_at": "2025-10-23T22:56:18Z"
+    },
+    {
+      "id": "642031c8-7001-41c7-8aa4-fbf241458a2a",
+      "name": "Fergusen angiotribe clamp",
+      "description": "Occlude veins and arteries",
+      "usage": null,
+      "category": "Gastrointestinal Instruments",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/fergusen-angiotribe-clamp-occlude-veins-and-arteries.jpg",
+      "created_at": "2025-10-23T22:56:19Z"
+    },
+    {
+      "id": "b6ecf1c2-061b-45ac-9acd-c3d93a624256",
+      "name": "Miller rectal scissors",
+      "description": "Dissect tissues in the anal canal",
+      "usage": null,
+      "category": "Gastrointestinal Instruments",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/miller-rectal-scissors-dissect-tissues-in-the-anal-canal.jpg",
+      "created_at": "2025-10-23T22:56:20Z"
+    },
+    {
+      "id": "f16dac0d-22b1-4480-8ef5-d5b71c6c8e2c",
+      "name": "Quimby scissors",
+      "description": "Cut delicate tissues",
+      "usage": null,
+      "category": "Gastrointestinal Instruments",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/quimby-scissors-cut-delicate-tissues.jpg",
+      "created_at": "2025-10-23T22:56:22Z"
+    },
+    {
+      "id": "07bef4f7-363f-4d0f-8ed0-303f92fcac8d",
+      "name": "Pratt rectal probe",
+      "description": "Remove O-rings",
+      "usage": null,
+      "category": "Gastrointestinal Instruments",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/pratt-rectal-probe-remove-o-rings.jpg",
+      "created_at": "2025-10-23T22:56:23Z"
+    },
+    {
+      "id": "cbf22277-a07e-4a1c-9850-e3b7ed4b5a9b",
+      "name": "Finochietto clamp",
+      "description": "Grasping tissues & blood vessels",
+      "usage": null,
+      "category": "Cardiothoracic And Vascular Surgical Instruments",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/finochietto-clamp-grasp-tissues-and-blood-vessels.jpg",
+      "created_at": "2025-10-23T22:56:29Z"
+    },
+    {
+      "id": "f022b4ac-91d7-4362-9632-a188a467f957",
+      "name": "Bulldog applicator",
+      "description": "Apply bulldog clamp",
+      "usage": null,
+      "category": "Cardiothoracic And Vascular Surgical Instruments",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/bulldog-applicator-apply-bulldog-clamp.jpg",
+      "created_at": "2025-10-23T22:56:30Z"
+    },
+    {
+      "id": "2d7f682e-0b07-4202-aebc-7c3a5a230725",
+      "name": "Sweet clip applier",
+      "description": "Ligate tubular sutures",
+      "usage": null,
+      "category": "Cardiothoracic And Vascular Surgical Instruments",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/sweet-clip-applier-ligate-tubular-sutures.jpg",
+      "created_at": "2025-10-23T22:56:30Z"
+    },
+    {
+      "id": "4313a607-3555-4fb1-b693-6641799b7e63",
+      "name": "Doyen rib stripper",
+      "description": "Strip (eliminate) periosteum from the ribs",
+      "usage": null,
+      "category": "Cardiothoracic And Vascular Surgical Instruments",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/doyen-rib-striper-eliminates-periosteum-from-the-ribs.jpg",
+      "created_at": "2025-10-23T22:56:32Z"
+    },
+    {
+      "id": "d47ff2d8-1cd2-4841-8a95-b6d107815e5a",
+      "name": "Garrett vascular dilators",
+      "description": "Performs vessel dilation",
+      "usage": null,
+      "category": "Cardiothoracic And Vascular Surgical Instruments",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/garrett-vascular-dilators-performs-dilation.jpg",
+      "created_at": "2025-10-23T22:56:32Z"
+    },
+    {
+      "id": "7cd0e054-5031-4698-ab1c-f241c62a932a",
+      "name": "Tessier caliper",
+      "description": "Measure anatomical structures",
+      "usage": null,
+      "category": "Cardiothoracic And Vascular Surgical Instruments",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/tessier-caliper-used-for-measuring.jpg",
+      "created_at": "2025-10-23T22:56:33Z"
+    },
+    {
+      "id": "4dfcd076-e8dd-4cca-b906-0524edd5e757",
+      "name": "Poole suction tube",
+      "description": "Remove a large volume of fluid",
+      "usage": null,
+      "category": "Cardiothoracic And Vascular Surgical Instruments",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/poole-suction-tube-remove-a-large-amount-of-fluid.jpg",
+      "created_at": "2025-10-23T22:56:34Z"
+    },
+    {
+      "id": "4ed550bb-92a4-48cc-b007-caf879417acd",
+      "name": "Malleable ribbon retractor",
+      "description": "Retract during orbital dissection",
+      "usage": null,
+      "category": "Cardiothoracic And Vascular Surgical Instruments",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/malleable-ribbon-retractor-use-at-the-time-of-orbital-dissection.jpg",
+      "created_at": "2025-10-23T22:56:35Z"
+    },
+    {
+      "id": "e22a97c4-827e-47f0-8bdd-7eae435a22e6",
+      "name": "Rummel tourniquet",
+      "description": "Occlude blood vessel",
+      "usage": null,
+      "category": "Cardiothoracic And Vascular Surgical Instruments",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/rummel-tourniquet-occlude-blood-vessels.jpg",
+      "created_at": "2025-10-23T22:56:37Z"
+    },
+    {
+      "id": "caa9a8b5-65b3-4b1c-96fc-fab3f97553de",
+      "name": "Veress needle",
+      "description": "Establish Pneumoperitoneum (Before abdominal endoscopy)",
+      "usage": null,
+      "category": "Endoscopic Instruments",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/veress-needle-establish-pneumoperitoneum-before-abdominal-endoscopy.jpg",
+      "created_at": "2025-10-23T22:56:38Z"
+    },
+    {
+      "id": "13ece2a8-9981-4cde-b92f-9a518b3bf4ba",
+      "name": "Thread sleeve",
+      "description": "Reinforcement (increase strength) of suture connection",
+      "usage": null,
+      "category": "Endoscopic Instruments",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/thread-sleeve-increase-connection-strength-of-thread.jpg",
+      "created_at": "2025-10-23T22:56:39Z"
+    },
+    {
+      "id": "a4d31107-af11-4653-ad8d-0eaf6f2c833d",
+      "name": "Insufflation tubbing",
+      "description": "Insufflate abdominal cavity",
+      "usage": null,
+      "category": "Endoscopic Instruments",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/insufflation-tubing-insufflate-abdominal-cavity.jpg",
+      "created_at": "2025-10-23T22:56:40Z"
+    },
+    {
+      "id": "a8b662d5-bb44-4c9a-9b8a-5d3675988631",
+      "name": "Telescope",
+      "description": "Magnified internal view",
+      "usage": null,
+      "category": "Endoscopic Instruments",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/telescope.jpg",
+      "created_at": "2025-10-23T22:56:41Z"
+    },
+    {
+      "id": "88253d52-5410-4b0a-8b31-f81c54154869",
+      "name": "Camera head",
+      "description": "Capture endoscopic view",
+      "usage": null,
+      "category": "Endoscopic Instruments",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/camera-head.jpg",
+      "created_at": "2025-10-23T22:56:41Z"
+    },
+    {
+      "id": "2ff1a4cd-214d-4408-b8c1-7ce7408ffc4e",
+      "name": "Bipolar cord",
+      "description": "Connect bipolar instruments",
+      "usage": null,
+      "category": "Endoscopic Instruments",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/bipolar-cord.jpg",
+      "created_at": "2025-10-23T22:56:42Z"
+    },
+    {
+      "id": "f4aeaa89-5d45-4e10-92e7-72697bee9aa6",
+      "name": "Monopolar cord",
+      "description": "Connect monoploar instrument",
+      "usage": null,
+      "category": "Endoscopic Instruments",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/monopolar-cord.jpg",
+      "created_at": "2025-10-23T22:56:43Z"
+    },
+    {
+      "id": "ecc72f7c-61b7-49b9-8b7c-ece66624790a",
+      "name": "Chitwood Debakey clamp",
+      "description": "Clamp lung tissues",
+      "usage": null,
+      "category": "Endoscopic Instruments",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/chitwood-debakey-clamp-clamp-lung-tissues.jpg",
+      "created_at": "2025-10-23T22:56:44Z"
+    },
+    {
+      "id": "03409a1a-3a3f-4093-bfd7-cbfda678502b",
+      "name": "Dennis clamp",
+      "description": "Hold tissues",
+      "usage": null,
+      "category": "Endoscopic Instruments",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/dennis-clamp-hold-tissues1.jpg",
+      "created_at": "2025-10-23T22:56:45Z"
+    },
+    {
+      "id": "64305b82-05ba-4a3a-8d09-64ce58a884d8",
+      "name": "Cusco Vaginal speculum",
+      "description": "Exposure of vaginal tissue",
+      "usage": null,
+      "category": "Other Equipment",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/cusco-vaginal-speculum-use-for-the-exposure-of-vaginal-tissue.jpg",
+      "created_at": "2025-10-23T22:56:46Z"
+    },
+    {
+      "id": "1a911c1b-d1fd-425f-879b-d1d201473cc1",
+      "name": "Rampley sponge holding forceps",
+      "description": "Hold swabs and sponges",
+      "usage": null,
+      "category": "Other Equipment",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/rampley-sponge-holding-forceps-hold-swabs-and-sponges.jpg",
+      "created_at": "2025-10-23T22:56:46Z"
+    },
+    {
+      "id": "5ed7fce7-ecff-48c9-a500-6500f113aff6",
+      "name": "McGivney hemorrhoids ligator",
+      "description": "Remove hemorrhoids",
+      "usage": null,
+      "category": "Gastrointestinal Instruments",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/mcgivney-hemorrhoid-ligator-remove-hemorrhoids.jpg",
+      "created_at": "2025-10-23T22:56:20Z"
+    },
+    {
+      "id": "0b0cb507-1888-47bc-9d6f-2b81731f6a34",
+      "name": "Rosser crypt hook",
+      "description": "Remove foreign object from rectal area",
+      "usage": null,
+      "category": "Gastrointestinal Instruments",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/rosser-crypt-hook-remove-foreign-things-from-the-rectal-area.jpg",
+      "created_at": "2025-10-23T22:56:24Z"
+    },
+    {
+      "id": "94b390af-e0a8-4363-a7e6-52aaf2830f3f",
+      "name": "Hirschman proctoscope",
+      "description": "Visual inspection of anal area",
+      "usage": null,
+      "category": "Gastrointestinal Instruments",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/hirschman-proctoscope-visual-inspection-of-anal-area.jpg",
+      "created_at": "2025-10-23T22:56:26Z"
+    },
+    {
+      "id": "2ea4d22e-0cb8-4a0e-b115-0757bb8145e2",
+      "name": "Rigid Sigmoidoscope",
+      "description": "Examine inside of anus",
+      "usage": null,
+      "category": "Gastrointestinal Instruments",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/rigid-sigmoidoscope-helps-in-examining-the-inside-of-the-anus.jpg",
+      "created_at": "2025-10-23T22:56:27Z"
+    },
+    {
+      "id": "3f5c5cf0-0fb2-44ec-a3e1-b7b4c01cc894",
+      "name": "Chelsea-Eaton anal speculum",
+      "description": "Give a view of the rectum",
+      "usage": null,
+      "category": "Gastrointestinal Instruments",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/chelseaeaton-anal-speculum-give-a-view-of-the-rectum.jpg",
+      "created_at": "2025-10-23T22:56:27Z"
+    },
+    {
+      "id": "08a5a865-d4a7-4843-a826-0e7a37ee6b3b",
+      "name": "Rochester-pean clamp",
+      "description": "Clamp larger vessels",
+      "usage": null,
+      "category": "Cardiothoracic And Vascular Surgical Instruments",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/rochesterpean-clamp-clamp-larger-vessels.jpg",
+      "created_at": "2025-10-23T22:56:28Z"
+    },
+    {
+      "id": "5da40d1e-5284-48db-bcd5-bde8591aecb0",
+      "name": "Kantrowitz clamp",
+      "description": "Grasping of tissues",
+      "usage": null,
+      "category": "Cardiothoracic And Vascular Surgical Instruments",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/kantrowitz-clamp-grasping-of-tissues.jpg",
+      "created_at": "2025-10-23T22:56:29Z"
+    },
+    {
+      "id": "6ecfbcce-6854-4b26-910f-588823e79616",
+      "name": "Gluck rib shears",
+      "description": "Cut ribs",
+      "usage": null,
+      "category": "Cardiothoracic And Vascular Surgical Instruments",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/gluck-rib-shears-cut-ribs.jpg",
+      "created_at": "2025-10-23T22:56:31Z"
+    },
+    {
+      "id": "4dde0c00-1918-4741-b21f-92a735a15abc",
+      "name": "Wolf suction",
+      "description": "Remove blood from surgical site",
+      "usage": null,
+      "category": "Cardiothoracic And Vascular Surgical Instruments",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/wolf-suction-remove-blood-from-surgical-site.jpg",
+      "created_at": "2025-10-23T22:56:33Z"
+    },
+    {
+      "id": "3404f18e-b13a-4f56-ac01-a952f1ea8284",
+      "name": "Allison retractor",
+      "description": "Retract lungs",
+      "usage": null,
+      "category": "Cardiothoracic And Vascular Surgical Instruments",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/allison-retractor-retract-lungs.jpg",
+      "created_at": "2025-10-23T22:56:34Z"
+    },
+    {
+      "id": "d5d4df72-583e-4f20-afad-b2238002c909",
+      "name": "Mclntosh suture holder",
+      "description": "Separate sutures",
+      "usage": null,
+      "category": "Cardiothoracic And Vascular Surgical Instruments",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/mcintosh-suture-holder-separate-sutures.jpg",
+      "created_at": "2025-10-23T22:56:36Z"
+    },
+    {
+      "id": "1254c410-ea23-4c62-a368-643dc866eaa9",
+      "name": "Ballon dissector",
+      "description": "Separate Extraperitoneal tissues",
+      "usage": null,
+      "category": "Endoscopic Instruments",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/balloon-dissector-separate-extraperitoneal-tissue.jpg",
+      "created_at": "2025-10-23T22:56:39Z"
+    },
+    {
+      "id": "ba5ecddd-7239-411b-8b04-f1769b5c9e4e",
+      "name": "Hartman crocodile forceps",
+      "description": "Nasal and oral use",
+      "usage": null,
+      "category": "Other Equipment",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/hartman-crocodiles-forceps-nasal-and-oral-use.jpg",
+      "created_at": "2025-10-23T22:56:47Z"
+    },
+    {
+      "id": "16e9f620-9971-47b3-9b31-0303e2ceb171",
+      "name": "Endoscopic trocar",
+      "description": "Small-puncture port",
+      "usage": null,
+      "category": "Endoscopic Instruments",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/endoscopic-trocar-used-for-doing-small-punctures.jpg",
+      "created_at": "2025-10-23T22:56:37Z"
+    },
+    {
+      "id": "3c0ef9ea-cfbc-4764-aeac-48897c24478e",
+      "name": "S-Retractor",
+      "description": "Retract abdominal walls",
+      "usage": null,
+      "category": "Endoscopic Instruments",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/s-retractors-retract-abdominal-walls.jpg",
+      "created_at": "2025-10-23T22:56:38Z"
+    },
+    {
+      "id": "b754e5c1-4789-4084-a7ae-723869f429fe",
+      "name": "Fiber-Optic light cable",
+      "description": "Illuminate surgical field",
+      "usage": null,
+      "category": "Endoscopic Instruments",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/fiberoptic-light-cable.jpg",
+      "created_at": "2025-10-23T22:56:40Z"
+    },
+    {
+      "id": "2babda29-9e45-4be4-b90a-b24ff2a26b75",
+      "name": "Chitwood suture cutter",
+      "description": "Cut sutures",
+      "usage": null,
+      "category": "Endoscopic Instruments",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/chitwood-suture-cutter-cut-sutures.jpg",
+      "created_at": "2025-10-23T22:56:45Z"
+    },
+    {
+      "id": "558637cb-3a72-4081-bfb2-6581de38b2b4",
+      "name": "Tenotomy Scissors",
+      "description": "For fine dissection",
+      "usage": null,
+      "category": "Ophthalmic Surgical Instruments",
+      "image_url": "https://www.vet-ebooks.com/wp-content/uploads/2022/12/tenotomy-scissors-for-fine-dissection.jpg",
+      "created_at": "2025-10-23T16:41:50Z"
+    }
+  ]
+}

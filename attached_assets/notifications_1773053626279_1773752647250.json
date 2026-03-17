@@ -1,0 +1,22 @@
+{
+  "items": [
+    {
+      "id": "e03f3990-b5b3-43c7-aed9-c2301bad7e99",
+      "title": "تێست",
+      "body": "تەنها بۆ تاقیکردنەوەی ئەپەکەیە",
+      "image_url": null,
+      "type": "general",
+      "is_read": true,
+      "timestamp": "2026-02-21T18:26:41Z"
+    },
+    {
+      "id": "db69bdff-ff56-44e8-87ab-9781fe64644e",
+      "title": "test",
+      "body": "test",
+      "image_url": null,
+      "type": "general",
+      "is_read": false,
+      "timestamp": "2026-02-27T19:50:29Z"
+    }
+  ]
+}

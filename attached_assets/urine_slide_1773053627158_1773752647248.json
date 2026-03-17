@@ -1,0 +1,39 @@
+{
+  "items": [
+    {
+      "id": "94885d01-50f2-4058-83c7-aaeb6f9ebd8b",
+      "name": "Crystal",
+      "species": "Cat",
+      "image_url": "https://www.kingsdale.com/wp-content/uploads/2023/07/crystals-in-cat-urine.jpg",
+      "created_at": "2026-02-19T17:27:15Z"
+    },
+    {
+      "id": "a7f736c3-1eab-48ff-9e4a-f54758b19518",
+      "name": "pollakiuria",
+      "species": "",
+      "image_url": "https://todaysveterinarypractice.com/wp-content/uploads/sites/4/2022/06/Beatty_TVPJulAug22_DryMounts_Figure2A-768x579.png",
+      "created_at": "2026-02-19T17:27:15Z"
+    },
+    {
+      "id": "587abcb0-f84f-416f-8778-e97e20c9c6b9",
+      "name": "White blood cells (WBCs)",
+      "species": "",
+      "image_url": "https://www.idexx.com/media/filer_public_thumbnails/filer_public/4c/53/4c532dc4-fa47-457d-9888-d7a037773c9b/blood-white-360x250.jpg__360x250_q80_subject_location-180%2C125_subsampling-2.jpg",
+      "created_at": "2026-02-19T17:27:15Z"
+    },
+    {
+      "id": "c79c1d36-5d95-49c2-95cb-1c982904ae5f",
+      "name": "Red blood cells (RBCs)",
+      "species": "",
+      "image_url": "https://www.idexx.com/media/filer_public_thumbnails/filer_public/d8/09/d8090cea-aad7-4157-ab01-d89b8fbad75b/blood-red-360x250.jpg__360x250_q80_subject_location-180%2C125_subsampling-2.jpg",
+      "created_at": "2026-02-19T17:27:15Z"
+    },
+    {
+      "id": "ab685135-c9a3-4950-b29a-815f497b253e",
+      "name": "Hyaline Cast (black arrow) in wet preparation of urin",
+      "species": "",
+      "image_url": "https://eclinpath.com/wp-content/uploads/hyaline-cast-labeled.jpg",
+      "created_at": "2026-02-19T17:27:15Z"
+    }
+  ]
+}
