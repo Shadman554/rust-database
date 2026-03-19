@@ -2,16 +2,22 @@ import { Router, type IRouter } from "express";
 import { eq, ilike, or, count, and } from "drizzle-orm";
 import { db, normalRangesTable } from "@workspace/db";
 import { requireAuth } from "../lib/auth.js";
-import { parsePagination, buildPagination, getOffset } from "../lib/pagination.js";
+import { parsePagination, buildPagination, getOffset, toStr } from "../lib/pagination.js";
 
+const MAX_Q_LENGTH = 200;
 const router: IRouter = Router();
 
 router.get("/normal-ranges", async (req, res): Promise<void> => {
   const { page, limit } = parsePagination(req.query as Record<string, unknown>);
   const offset = getOffset(page, limit);
-  const q = req.query.q as string | undefined;
-  const species = req.query.species as string | undefined;
-  const category = req.query.category as string | undefined;
+  const q = toStr(req.query.q);
+  const species = toStr(req.query.species);
+  const category = toStr(req.query.category);
+
+  if (q && q.length > MAX_Q_LENGTH) {
+    res.status(400).json({ error: `q parameter must be ${MAX_Q_LENGTH} characters or fewer` });
+    return;
+  }
 
   const conditions = [];
   if (species) conditions.push(eq(normalRangesTable.species, species));
@@ -20,8 +26,10 @@ router.get("/normal-ranges", async (req, res): Promise<void> => {
 
   const where = conditions.length > 1 ? and(...conditions) : conditions[0];
 
-  const [totalResult] = await db.select({ count: count() }).from(normalRangesTable).where(where);
-  const items = await db.select().from(normalRangesTable).where(where).limit(limit).offset(offset).orderBy(normalRangesTable.parameter);
+  const [[totalResult], items] = await Promise.all([
+    db.select({ count: count() }).from(normalRangesTable).where(where),
+    db.select().from(normalRangesTable).where(where).limit(limit).offset(offset).orderBy(normalRangesTable.parameter),
+  ]);
 
   res.json({ items, pagination: buildPagination(page, limit, Number(totalResult?.count ?? 0)) });
 });

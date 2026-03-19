@@ -2,15 +2,21 @@ import { Router, type IRouter } from "express";
 import { eq, ilike, or, count, and } from "drizzle-orm";
 import { db, slidesTable } from "@workspace/db";
 import { requireAuth } from "../lib/auth.js";
-import { parsePagination, buildPagination, getOffset } from "../lib/pagination.js";
+import { parsePagination, buildPagination, getOffset, toStr } from "../lib/pagination.js";
 
+const MAX_Q_LENGTH = 200;
 const router: IRouter = Router();
 
 router.get("/slides", async (req, res): Promise<void> => {
   const { page, limit } = parsePagination(req.query as Record<string, unknown>);
   const offset = getOffset(page, limit);
-  const q = req.query.q as string | undefined;
-  const category = req.query.category as string | undefined;
+  const q = toStr(req.query.q);
+  const category = toStr(req.query.category);
+
+  if (q && q.length > MAX_Q_LENGTH) {
+    res.status(400).json({ error: `q parameter must be ${MAX_Q_LENGTH} characters or fewer` });
+    return;
+  }
 
   const conditions = [];
   if (category) conditions.push(eq(slidesTable.category, category));
@@ -18,8 +24,10 @@ router.get("/slides", async (req, res): Promise<void> => {
 
   const where = conditions.length > 1 ? and(...conditions) : conditions[0];
 
-  const [totalResult] = await db.select({ count: count() }).from(slidesTable).where(where);
-  const items = await db.select().from(slidesTable).where(where).limit(limit).offset(offset).orderBy(slidesTable.name);
+  const [[totalResult], items] = await Promise.all([
+    db.select({ count: count() }).from(slidesTable).where(where),
+    db.select().from(slidesTable).where(where).limit(limit).offset(offset).orderBy(slidesTable.name),
+  ]);
 
   res.json({ items, pagination: buildPagination(page, limit, Number(totalResult?.count ?? 0)) });
 });

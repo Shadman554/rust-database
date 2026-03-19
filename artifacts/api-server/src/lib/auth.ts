@@ -11,6 +11,10 @@ const PBKDF2_ITERATIONS = 120_000;
 const PBKDF2_KEYLEN = 64;
 const PBKDF2_DIGEST = "sha512";
 
+// Precomputed dummy hash used when a user is not found, so login timing
+// is constant regardless of whether the username exists.
+const DUMMY_HASH = `pbkdf2:${PBKDF2_ITERATIONS}:${"0".repeat(64)}:${"0".repeat(128)}`;
+
 function base64url(input: Buffer | string): string {
   const buf = typeof input === "string" ? Buffer.from(input) : input;
   return buf.toString("base64").replace(/\+/g, "-").replace(/\//g, "_").replace(/=/g, "");
@@ -74,25 +78,24 @@ export async function hashPassword(password: string): Promise<string> {
   return `pbkdf2:${PBKDF2_ITERATIONS}:${salt}:${hash}`;
 }
 
+async function runPbkdf2(password: string, salt: string, iterations: number): Promise<string> {
+  return new Promise<string>((resolve, reject) => {
+    pbkdf2(password, salt, iterations, PBKDF2_KEYLEN, PBKDF2_DIGEST, (err, key) => {
+      if (err) reject(err);
+      else resolve(key.toString("hex"));
+    });
+  });
+}
+
 export async function verifyPassword(password: string, stored: string): Promise<boolean> {
   try {
-    if (stored.startsWith("pbkdf2:")) {
-      const [, iterStr, salt, hash] = stored.split(":");
-      const iterations = parseInt(iterStr, 10);
-      const candidate = await new Promise<string>((resolve, reject) => {
-        pbkdf2(password, salt, iterations, PBKDF2_KEYLEN, PBKDF2_DIGEST, (err, key) => {
-          if (err) reject(err);
-          else resolve(key.toString("hex"));
-        });
-      });
-      const a = Buffer.from(hash, "hex");
-      const b = Buffer.from(candidate, "hex");
-      if (a.length !== b.length) return false;
-      return timingSafeEqual(a, b);
+    if (!stored.startsWith("pbkdf2:")) {
+      return false;
     }
-    const [salt, hash] = stored.split(":");
-    if (!salt || !hash) return false;
-    const candidate = createHmac("sha256", salt).update(password).digest("hex");
+    const [, iterStr, salt, hash] = stored.split(":");
+    const iterations = parseInt(iterStr, 10);
+    if (!salt || !hash || isNaN(iterations) || iterations < 1) return false;
+    const candidate = await runPbkdf2(password, salt, iterations);
     const a = Buffer.from(hash, "hex");
     const b = Buffer.from(candidate, "hex");
     if (a.length !== b.length) return false;
@@ -100,6 +103,20 @@ export async function verifyPassword(password: string, stored: string): Promise<
   } catch {
     return false;
   }
+}
+
+// Runs a full PBKDF2 computation against a dummy hash so that login responses
+// take the same amount of time whether or not the username exists (prevents
+// username enumeration via timing).
+export async function verifyPasswordConstantTime(
+  password: string,
+  stored: string | null
+): Promise<boolean> {
+  if (stored === null) {
+    await verifyPassword(password, DUMMY_HASH);
+    return false;
+  }
+  return verifyPassword(password, stored);
 }
 
 export interface AuthRequest extends Request {

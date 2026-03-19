@@ -1,7 +1,7 @@
 import path from "path";
 import { fileURLToPath } from "url";
 import { build as esbuild } from "esbuild";
-import { rm, readFile } from "fs/promises";
+import { rm, readFile, copyFile } from "fs/promises";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -67,6 +67,13 @@ async function buildAll() {
     external: externals,
     logLevel: "info",
   });
+
+  // Copy OpenAPI spec alongside the bundle so docs/openapi routes work in production
+  await copyFile(
+    path.resolve(__dirname, "../../lib/api-spec/openapi.yaml"),
+    path.resolve(distDir, "openapi.yaml"),
+  );
+  console.log("copied openapi.yaml → dist/openapi.yaml");
 }
 
 buildAll().catch((err) => {

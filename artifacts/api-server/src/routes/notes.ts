@@ -2,21 +2,29 @@ import { Router, type IRouter } from "express";
 import { eq, ilike, or, count } from "drizzle-orm";
 import { db, notesTable } from "@workspace/db";
 import { requireAuth } from "../lib/auth.js";
-import { parsePagination, buildPagination, getOffset } from "../lib/pagination.js";
+import { parsePagination, buildPagination, getOffset, toStr } from "../lib/pagination.js";
 
+const MAX_Q_LENGTH = 200;
 const router: IRouter = Router();
 
 router.get("/notes", async (req, res): Promise<void> => {
   const { page, limit } = parsePagination(req.query as Record<string, unknown>);
   const offset = getOffset(page, limit);
-  const q = req.query.q as string | undefined;
+  const q = toStr(req.query.q);
+
+  if (q && q.length > MAX_Q_LENGTH) {
+    res.status(400).json({ error: `q parameter must be ${MAX_Q_LENGTH} characters or fewer` });
+    return;
+  }
 
   const where = q
     ? or(ilike(notesTable.name, `%${q}%`), ilike(notesTable.description, `%${q}%`))
     : undefined;
 
-  const [totalResult] = await db.select({ count: count() }).from(notesTable).where(where);
-  const items = await db.select().from(notesTable).where(where).limit(limit).offset(offset).orderBy(notesTable.name);
+  const [[totalResult], items] = await Promise.all([
+    db.select({ count: count() }).from(notesTable).where(where),
+    db.select().from(notesTable).where(where).limit(limit).offset(offset).orderBy(notesTable.name),
+  ]);
 
   res.json({ items, pagination: buildPagination(page, limit, Number(totalResult?.count ?? 0)) });
 });

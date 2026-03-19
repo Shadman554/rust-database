@@ -10,8 +10,10 @@ router.get("/notifications", async (req, res): Promise<void> => {
   const { page, limit } = parsePagination(req.query as Record<string, unknown>);
   const offset = getOffset(page, limit);
 
-  const [totalResult] = await db.select({ count: count() }).from(notificationsTable);
-  const items = await db.select().from(notificationsTable).limit(limit).offset(offset).orderBy(notificationsTable.createdAt);
+  const [[totalResult], items] = await Promise.all([
+    db.select({ count: count() }).from(notificationsTable),
+    db.select().from(notificationsTable).limit(limit).offset(offset).orderBy(notificationsTable.createdAt),
+  ]);
 
   res.json({ items, pagination: buildPagination(page, limit, Number(totalResult?.count ?? 0)) });
 });

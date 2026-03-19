@@ -28,3 +28,13 @@ export function buildPagination(page: number, limit: number, total: number): Pag
 export function getOffset(page: number, limit: number): number {
   return (page - 1) * limit;
 }
+
+/**
+ * Safely extracts a string query param.
+ * Express parses `?q=a&q=b` as string[], not string. This helper returns the
+ * value only when it is actually a string, preventing type-confusion bugs where
+ * an array would silently pass a char-length guard or be stringified by the DB.
+ */
+export function toStr(v: unknown): string | undefined {
+  return typeof v === "string" ? v : undefined;
+}

@@ -1,13 +1,21 @@
 import { Router, type IRouter } from "express";
 import { readFileSync } from "fs";
-import { resolve, dirname } from "path";
-import { fileURLToPath } from "url";
+import { resolve } from "path";
 
 const router: IRouter = Router();
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
-const SPEC_PATH = resolve(__dirname, "../../../../lib/api-spec/openapi.yaml");
+// Resolve without import.meta.url so this file is safe in both ESM (tsx dev)
+// and CJS (esbuild production bundle) without any import.meta warnings.
+//
+// Dev:  pnpm runs scripts from the package directory (artifacts/api-server/),
+//       so CWD is artifacts/api-server/ → two levels up reaches the workspace root.
+//
+// Prod: Railway runs the start command from the project root,
+//       so CWD is the project root → openapi.yaml was copied by build.ts.
+const SPEC_PATH =
+  process.env.NODE_ENV === "production"
+    ? resolve(process.cwd(), "artifacts/api-server/dist/openapi.yaml")
+    : resolve(process.cwd(), "../../lib/api-spec/openapi.yaml");
 
 router.get("/openapi.yaml", (_req, res): void => {
   try {

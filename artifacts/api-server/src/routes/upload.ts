@@ -1,6 +1,6 @@
 import { Router, type IRouter } from "express";
-import { createWriteStream, mkdirSync } from "fs";
-import { join, extname } from "path";
+import { createWriteStream, mkdirSync, unlink } from "fs";
+import { join } from "path";
 import { randomBytes } from "crypto";
 import { requireAuth } from "../lib/auth.js";
 
@@ -9,11 +9,32 @@ const router: IRouter = Router();
 const UPLOADS_DIR = join(process.cwd(), "uploads");
 try { mkdirSync(UPLOADS_DIR, { recursive: true }); } catch {}
 
-const ALLOWED_TYPES = new Set([
-  "image/jpeg", "image/jpg", "image/png", "image/gif",
-  "image/webp", "image/svg+xml",
-]);
+// SVG is intentionally excluded: SVGs can contain scripts and would be an XSS
+// vector if served from the same origin, even when loaded as an <img> in some
+// contexts (e.g. <embed>, <object>, or direct navigation).
+const MIME_TO_EXT: Record<string, string> = {
+  "image/jpeg": ".jpg",
+  "image/jpg": ".jpg",
+  "image/png": ".png",
+  "image/gif": ".gif",
+  "image/webp": ".webp",
+};
+
+const ALLOWED_MIMES = new Set(Object.keys(MIME_TO_EXT));
 const MAX_SIZE = 10 * 1024 * 1024;
+
+function detectMimeFromBytes(buf: Buffer): string | null {
+  if (buf.length < 4) return null;
+  if (buf[0] === 0xff && buf[1] === 0xd8 && buf[2] === 0xff) return "image/jpeg";
+  if (buf[0] === 0x89 && buf[1] === 0x50 && buf[2] === 0x4e && buf[3] === 0x47) return "image/png";
+  if (buf[0] === 0x47 && buf[1] === 0x49 && buf[2] === 0x46) return "image/gif";
+  if (buf.length >= 12) {
+    const riff = buf.slice(0, 4).toString("ascii");
+    const webp = buf.slice(8, 12).toString("ascii");
+    if (riff === "RIFF" && webp === "WEBP") return "image/webp";
+  }
+  return null;
+}
 
 router.post("/upload/image", requireAuth, async (req, res): Promise<void> => {
   const contentType = req.headers["content-type"] ?? "";
@@ -46,8 +67,7 @@ router.post("/upload/image", requireAuth, async (req, res): Promise<void> => {
 
   const parts = splitBuffer(body, boundaryBuf);
   let fileBuffer: Buffer | null = null;
-  let mimeType = "application/octet-stream";
-  let originalName = "upload";
+  let declaredMime = "application/octet-stream";
 
   for (const part of parts) {
     const headerEnd = part.indexOf("\r\n\r\n");
@@ -56,10 +76,7 @@ router.post("/upload/image", requireAuth, async (req, res): Promise<void> => {
     if (!headers.includes("filename=")) continue;
 
     const contentTypeMatch = headers.match(/Content-Type:\s*([^\r\n]+)/i);
-    if (contentTypeMatch) mimeType = contentTypeMatch[1].trim();
-
-    const nameMatch = headers.match(/filename="([^"]+)"/);
-    if (nameMatch) originalName = nameMatch[1];
+    if (contentTypeMatch) declaredMime = contentTypeMatch[1].trim().toLowerCase();
 
     fileBuffer = part.slice(headerEnd + 4, part.length - 2);
     break;
@@ -70,12 +87,27 @@ router.post("/upload/image", requireAuth, async (req, res): Promise<void> => {
     return;
   }
 
-  if (!ALLOWED_TYPES.has(mimeType)) {
+  const detectedMime = detectMimeFromBytes(fileBuffer);
+  if (!detectedMime) {
+    res.status(400).json({ error: "Could not determine file type from content" });
+    return;
+  }
+
+  if (!ALLOWED_MIMES.has(detectedMime)) {
     res.status(400).json({ error: "Invalid file type. Only images are allowed." });
     return;
   }
 
-  const ext = extname(originalName) || ".jpg";
+  if (declaredMime !== "application/octet-stream" && declaredMime !== detectedMime) {
+    const normalizedDeclared = declaredMime === "image/jpg" ? "image/jpeg" : declaredMime;
+    const normalizedDetected = detectedMime === "image/jpg" ? "image/jpeg" : detectedMime;
+    if (normalizedDeclared !== normalizedDetected) {
+      res.status(400).json({ error: "Declared content type does not match actual file content" });
+      return;
+    }
+  }
+
+  const ext = MIME_TO_EXT[detectedMime] ?? ".jpg";
   const filename = `${randomBytes(16).toString("hex")}${ext}`;
   const filePath = join(UPLOADS_DIR, filename);
 
@@ -84,7 +116,10 @@ router.post("/upload/image", requireAuth, async (req, res): Promise<void> => {
     ws.write(fileBuffer!);
     ws.end();
     ws.on("finish", resolve);
-    ws.on("error", reject);
+    ws.on("error", (err) => {
+      unlink(filePath, () => {});
+      reject(err);
+    });
   });
 
   res.json({
