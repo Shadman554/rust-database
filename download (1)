@@ -1,0 +1,43 @@
+modules = ["nodejs-20", "web", "bash", "postgresql-16"]
+[agent]
+expertMode = true
+
+[nix]
+channel = "stable-25_05"
+
+[workflows]
+runButton = "Project"
+
+[[workflows.workflow]]
+name = "Project"
+mode = "parallel"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "Start application"
+
+[[workflows.workflow]]
+name = "Start application"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "PORT=3000 pnpm --filter @workspace/api-server run dev"
+waitForPort = 3000
+
+[workflows.workflow.metadata]
+outputType = "console"
+
+[[ports]]
+localPort = 3000
+externalPort = 80
+
+[[ports]]
+localPort = 3001
+externalPort = 3001
+
+[deployment]
+deploymentTarget = "autoscale"
+run = ["bash", "-c", "PORT=3000 node artifacts/api-server/dist/index.cjs"]
+build = ["bash", "-c", "pnpm install && pnpm --filter @workspace/api-server run build"]
