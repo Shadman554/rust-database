@@ -11,11 +11,34 @@ pnpm workspace monorepo using TypeScript. This is the **VetStan Veterinary Dicti
 - **Package manager**: pnpm
 - **TypeScript version**: 5.9
 - **API framework**: Express 5
-- **Database**: PostgreSQL + Drizzle ORM
+- **Database**: PostgreSQL + Drizzle ORM + pg_trgm (GIN trigram indexes for fast ILIKE search)
 - **Auth**: Custom JWT (HMAC-SHA256, no external libraries)
 - **Validation**: Zod (`zod/v4`), `drizzle-zod`
 - **API codegen**: Orval (from OpenAPI spec)
 - **Build**: esbuild (CJS bundle)
+
+## Security & Performance Hardening (applied)
+
+- **Search**: Fixed broken column references (`word`/`kurdishMeaning` → `name`/`kurdish`), added type allowlist validation, added 200-char q length cap
+- **Search**: 9 DB queries now run in parallel via `Promise.all` (was sequential)
+- **List endpoints**: All 10 list routes run count + data queries in parallel via `Promise.all`
+- **Upload**: Extension derived from MIME type (not attacker-controlled filename); magic-byte validation ensures declared MIME matches actual file bytes; SVG detection for XML content
+- **Auth**: Email format regex + length validation; duplicate username AND email both checked before insert with clean 409 responses
+- **Rate limiting**: Added write limiter (60 POST/PUT/PATCH/DELETE per minute per IP) on top of global (300/min) and auth (15/15min) limiters
+- **Error handler**: Catches PostgreSQL error codes (23505 unique violation → 409, 23503 FK violation → 400, 23502 not-null → 400)
+- **GIN indexes**: `pg_trgm` extension enabled; GIN trigram indexes on `words.name`, `words.kurdish`, `instruments.name`, `diseases.name`, `drugs.name` for fast ILIKE performance on 26K+ records
+- **normalRanges**: Fixed missing parallel count+data queries and q-length validation (was missed in initial pass)
+- **Login timing oracle**: Login now always runs a full PBKDF2 computation regardless of whether the username exists (via `verifyPasswordConstantTime`). Previously, a non-existent user skipped PBKDF2, making the response ~150ms faster — enough to enumerate valid usernames
+- **Legacy weak password path removed**: The old single-iteration HMAC-SHA256 password fallback (from the Python backend migration) is eliminated. Any stored password not in pbkdf2 format is now rejected outright
+- **Password max-length DoS guard**: Register and login both reject passwords longer than 1 024 chars before PBKDF2 runs; without this a single request with a ~900 KB password string would monopolise a worker thread
+- **Production OpenAPI path fixed**: `docs.ts` used a `__dirname`-relative path that resolved correctly from `src/routes/` in dev but overshot the filesystem root when bundled into `dist/`; now uses `NODE_ENV`-aware resolution and `build.ts` copies `openapi.yaml` alongside `index.cjs` in the production bundle
+- **`notifications.created_at` index**: Added a B-tree index so the default sort order query uses an index scan instead of a sequential scan
+- **SVG uploads removed**: SVGs can contain `<script>` tags and inline event handlers. Serving them from the same origin with `Content-Type: image/svg+xml` makes them executable when loaded via `<embed>`, `<object>`, or direct navigation — a stored XSS risk. SVG also has no reliable magic bytes; the previous detection (look for `<svg` in first 512 bytes) was bypassed by any SVG with an XML declaration. Removed from allowed types entirely; JPEG, PNG, GIF, and WebP remain
+- **`allowExitOnIdle` removed from DB pool**: This flag tells Node to unreference the pool's TCP sockets so they don't block event-loop exit — correct for CLI scripts, wrong for a server. Removed so the process only exits on an explicit signal
+- **Upload error cleanup**: If the `createWriteStream` write fails after the file is created, the zero-byte/partial file is now deleted immediately rather than left on disk
+- **JSON body type confusion fixed**: Auth routes now explicitly check `typeof` for `username`, `email`, and `password` before using them. Previously, passing a non-string (e.g. `"password":[1,2,3,4,5,6,7,8,9]`) would cause `hashPassword` to throw a TypeError resulting in a 500 — now returns a clean 400
+- **Query param type confusion fixed**: All list and search routes used `req.query.x as string`, which silently accepted arrays (e.g. `?q=a&q=b` → `["a","b"]`) and objects, letting them bypass the 200-char length cap or be stringified into DB queries. A `toStr()` helper in `pagination.ts` now returns `undefined` for anything that isn't a plain string
+- **Production `import.meta.url` crash fixed**: `docs.ts` called `fileURLToPath(import.meta.url)` unconditionally at module load time. In the CJS esbuild bundle `import.meta` is `{}` so this threw a TypeError before the server could start. Rewritten to use `process.cwd()` only, removing `import.meta.url` entirely — zero esbuild warnings, confirmed working in the production bundle
 
 ## API Endpoints (50+)
 
@@ -95,6 +118,38 @@ The seed script is at `scripts/src/seed.ts` and batch-inserts 500 records at a t
 JWT tokens use HMAC-SHA256 (no external library). 7-day expiry.
 Secret configured via `JWT_SECRET` env var (defaults to a fallback for dev).
 Send as: `Authorization: Bearer <token>`
+
+## Railway Deployment
+
+Config file: `railway.toml` (root of project)
+Node version pinned: `.node-version` → `20`
+
+**Build command (Railway runs this):**
+```
+pnpm install --frozen-lockfile && pnpm --filter @workspace/api-server run build
+```
+- Compiles TypeScript → `artifacts/api-server/dist/index.cjs` (esbuild, CJS, minified)
+- Copies `lib/api-spec/openapi.yaml` → `artifacts/api-server/dist/openapi.yaml`
+
+**Start command (Railway runs this):**
+```
+node artifacts/api-server/dist/index.cjs
+```
+
+**Required environment variables in Railway:**
+| Variable | How to get it |
+|---|---|
+| `DATABASE_URL` | Add the Railway PostgreSQL plugin — it auto-sets this |
+| `JWT_SECRET` | Set manually to a long random string (e.g. `openssl rand -hex 32`) |
+| `PORT` | Auto-injected by Railway — do not set manually |
+
+**After first deploy — seed the database:**
+```
+railway run pnpm --filter @workspace/scripts run seed
+```
+Or run the seed script from a Railway one-off task pointing at your production `DATABASE_URL`.
+
+**Note on uploads:** The `uploads/` directory is written to the container filesystem, which is ephemeral in Railway. Files survive restarts but are lost on redeploy. For persistent uploads, replace the local write in `upload.ts` with an S3/R2 upload.
 
 ## Structure
 
